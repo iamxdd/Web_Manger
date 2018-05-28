@@ -1,0 +1,41 @@
+<div class="login-container">
+	<div class="bg bg-center">
+	</div>
+	<div class="bg bg-rightTop">
+	</div>
+	<div class="bg bg-rightBot">
+	</div>
+	<div class="login-box">
+		<div class="bg bg-circle">
+		</div>
+		<div class="lg-block" cg-busy="listBusyPromise">
+			<h3>四川智造人才网管理平台</h3>
+			<form autocomplete="off">
+				<div class="foombox">
+					<ul>
+						<li class="name">
+							<span></span>
+							<input type="text" ng-model="account.name" name="name" id="name" placeholder="请输入您的账号" value="" />
+						</li>
+						<li class="password">
+							<span></span>
+							<input type="password" ng-model="account.password" name="password" id="password" placeholder="请输入您的密码" value="" />
+						</li>
+						<li class="yanzCode" ng-if="showCode">
+							<span></span>
+							<input type="text" ng-model="account.yanzCode" name="yaCode" id="yanzCode" placeholder="请输入验证码" value="" />
+							<i class="yanzImg" ng-click="getImgUrlInit()"><img title="点击刷新验证码" ng-src="{{imgUrlInit}}" /></i>
+						</li>
+					</ul>
+				</div>
+			</form>
+			<div class="lg-remember">
+				<span class="ar-left" ng-click="remeber=!remeber"><span ng-class="{'active':remeber}" class="ar-blank"></span>下次自动登录</span>
+				<!--<a href="#" class="ar-right">忘记密码</a>-->
+			</div>
+			<div class="lg-submitBtn">
+				<button type="button" ng-click="login()">登 录</button>
+			</div>
+		</div>
+	</div>
+</div>

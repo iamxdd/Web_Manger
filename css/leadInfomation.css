@@ -1,0 +1,1090 @@
+#u1191 {
+	font-family: 'FontAwesome';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 28px;
+	color: #FF6600;
+	text-align: left;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 21px;
+	white-space: nowrap;
+}
+
+.footer_top_left h2 {
+	font-size: 1.2em !important;
+}
+
+.infomation-banner_content {
+	min-height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+.infomation-tag {
+	width: 300px;
+	height: auto;
+	margin-bottom: 20px;
+	padding: 2px 2px;
+}
+
+.supply-tag {
+	padding: 0px 0px;
+}
+
+.infomation-p-icon {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.infomation-p-icon span {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+	font-weight: bolder;
+	font-style: normal;
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+.infomation-left i {
+	font-weight: 400;
+	font-style: normal;
+	font-size: 28px;
+	color: #FF6600;
+	text-indent: 10px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+.infomation-tag div {
+	text-align: center;
+}
+
+.news-infomation-li li:nth-child(1) a,
+.news-infomation-li li:nth-child(2) a,
+.news-infomation-li li:nth-child(3) a {
+	font-weight: bold;
+}
+
+.certfCircle {
+	width: 61px;
+	height: 61px;
+	border-radius: 30px;
+	border: 1px solid #333333;
+	margin-left: -5px;
+}
+
+.supply-ul p {
+	text-indent: 10px;
+	padding: 0 4px;
+}
+
+.courseList li {
+	padding: 5px 15px;
+}
+
+.courseList li a {
+	font-family: 'Arial Normal', 'Arial';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 13px;
+	color: #333333
+}
+
+.courseList li:nth-child(1) a,
+.courseList li:nth-child(2) a,
+.courseList li:nth-child(3) a {
+	font-weight: bold;
+}
+
+.lineHeight {
+	line-height: 30px;
+}
+
+.news-infomation-li a {
+	font-family: 'Arial Normal', 'Arial';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	color: #333333
+}
+
+.infomation-p-icon a {
+	float: right;
+	line-height: 50px;
+	margin-right: 30px;
+}
+
+.infomation-left {
+	border: 1px solid #D7D7D7;
+	border-radius: 4px;
+}
+
+.col-padding {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.btn-default-new {
+	color: #333;
+	background-color: #E4E4E4;
+	border-color: #ccc;
+	margin: 10px 4px;
+	min-width: 87px;
+}
+
+.btn-default-left {
+	color: #333;
+	background-color: #9999FF;
+	border-color: #ccc;
+	margin: 10px 4px;
+	min-width: 87px;
+}
+
+.btn-default-right {
+	color: #333;
+	background-color: #FFCC66;
+	border-color: #ccc;
+	margin: 10px 4px;
+	min-width: 87px;
+}
+
+.infomation-li {
+	margin-top: 20px;
+	border-radius: 4px;
+}
+
+.news-infomation-li {
+	padding-left: 10px;
+}
+
+.news-infomation-li li {
+	margin: 23px 10px;
+	font-size: 14px;
+	max-width: 237px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.infomation-right-header {
+	height: 33px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.infomation-right-header h5 {
+	margin-top: 19px;
+	cursor: pointer;
+}
+
+.infomation-img-logo {
+	float: left;
+}
+
+.infomation-img-logo img {
+	width: 240px;
+	height: 150px;
+	margin-right: 10px;
+}
+
+.infomation-img-cont h4 {
+	font-weight: bold;
+	max-width: 860px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.text-indent {
+	text-indent: 2em;
+}
+
+.infomation-table {
+	padding-left: 15px!important
+}
+
+.infomation-table .li-line {
+	border-bottom: 1px solid #CCCCCC;
+	width: 100%;
+	margin-bottom: 16px;
+	margin-top: 19px;
+}
+
+.info-btn-div {
+	margin-bottom: 10px;
+}
+
+.info-btn-div span {
+	display: inline-block;
+	height: 34px;
+	line-height: 34px;
+	position: relative;
+	top: 10px;
+	margin-right: 20px;
+	margin-left: 51px;
+}
+
+.infomation-table li {
+	cursor: pointer;
+}
+
+
+/*人才供需*/
+
+.supply span {
+	font-weight: bolder;
+	margin-right: 11px;
+}
+
+.supply-ul li {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.supply-ul li div.col-lg-3 img {
+	width: 70px;
+	height: 60px;
+}
+
+.btns {
+	display: inline-block;
+	padding: 6px 1px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.btn-supply-left {
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+	margin: 10px 4px;
+	min-width: 87px;
+}
+
+.bgcolorL {
+	background-color: #169BD5 !important;
+	color: #fff !important;
+}
+
+.bgcolorR {
+	background-color: #FF6600 !important;
+	color: #fff !important;
+}
+
+.btn-default-right {
+	margin: 10px 4px;
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+.supply-line {
+	clear: both;
+	width: 100%;
+	border-bottom: 1px solid #D7D7D7;
+}
+
+.peple-supply img {
+	margin: auto 4px;
+}
+
+.cir-span {
+	display: inline-block;
+	width: 10px;
+	height: 10xp;
+	height: 10px;
+	border-radius: 5px;
+	background: red;
+	position: relative;
+	top: 22px;
+}
+
+.supply-infomation p,
+.supply-infomation .cir-span-new {
+	margin-left: 20px;
+	margin-right: 5px;
+}
+
+.fa-star-new {
+	color: red;
+}
+
+.supply-infomation p {
+	font-weight: bolder;
+	margin-bottom: 20px;
+}
+
+.supply-infomation li {
+	margin: 2px 5px;
+}
+
+.supply-infomation .supply-line {
+	margin-top: 10px;
+	width: 300px;
+}
+
+.supply-tab li {
+	float: left;
+	width: 134px;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	color: #FFFFFF;
+	margin-right: 6px;
+}
+
+.supply-tab ul {
+	width: 100%;
+	height: 55px;
+	background-color: #F2F2F2;
+}
+
+.supplyactive {
+	background-color: #169BD5;
+}
+
+.ressupplyactive {
+	background-color: #D7D7D7;
+}
+
+.search_bottom_content p {
+	width: 50px;
+	float: left;
+	padding-top: 17px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.search_bottom_content h4 {
+	margin: 0;
+	padding: 0;
+	width: 775px;
+	float: left;
+	padding-top: 17px;
+	margin-left: 10px;
+}
+
+.search_bottom_content {
+	margin-left: 30px;
+	clear: both;
+}
+
+.search_bottom_content span {
+	display: inline-block;
+	font-size: 15px;
+	min-width: 67px;
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.txcolor {
+	color: red;
+}
+
+.cotagory-content li {
+	width: 270px;
+	height: 260px;
+	border-radius: 4px;
+	border: 1px solid #D7D7D7;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+
+.cotagory-content li div {
+	text-align: center;
+	height: 165px;
+	margin-top: 9px;
+}
+
+.cotagory-content li div img {
+	height: 100%;
+	width: 238px;
+}
+
+.supply-cot {
+	margin-bottom: 70px;
+}
+
+.cotagory-content p {
+	font-weight: bold;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+
+.train-active {
+	display: block;
+}
+
+.train-hidden {
+	display: none;
+}
+
+.cotagory-content span {
+	color: #999999;
+	margin: 15px 15px
+}
+
+.cotagory-content span i {
+	font-weight: bold;
+	color: red;
+	font-size: 18px;
+}
+
+.cotagory-content .btnright {
+	float: right;
+	margin: 5px 10px 0 0;
+}
+
+.cotagory-content li {
+	cursor: pointer;
+}
+
+.cotagory-content {
+	margin-left: 15px;
+}
+
+.peple-infomation div p {
+	/*font-weight: bold;*/
+	display: inline-block;
+	min-width: 63px;
+	text-align: right;
+	color: #8c8c8c;
+	text-align: left;
+}
+
+.peple-infomation div.col-lg-6 {
+	margin-bottom: 10px;
+}
+
+.peple-infomation span {
+	color: #000000;
+}
+
+.peple-infomation-btn {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.peple-infomation-btn button {
+	margin: 5px 9px;
+}
+
+.tab-one-detais {
+	/*margin-top: 34px;*/
+}
+
+.work-experience h5,
+.get-achievements h5 {
+	margin-top: 14px;
+	padding-left: 10px;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+}
+
+.time-p {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.work-description p {
+	font-weight: bold;
+}
+
+.work-description span {
+	text-indent: 2em;
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	text-align: justify;
+}
+
+.get-achievements button {
+	margin: 15px 20px;
+}
+
+.get-achievements h5 {
+	margin-top: -4px;
+}
+
+.top-ion {
+	font-weight: 400;
+	font-style: normal;
+	font-size: 28px;
+	color: #FF6600;
+	text-indent: 20px;
+	line-height: 50px;
+	vertical-align: middle
+}
+
+.button-bs button {
+	margin-right: 24px;
+	margin-left: 100px;
+	margin-top: 57px;
+	min-width: 157px;
+}
+
+.tab-header {
+	padding-left: 40px;
+}
+
+.tab-header img {
+	width: 258px;
+	height: 143px;
+	border-radius: 4px;
+}
+
+.tab-two-detais .peple-infomation div.col-lg-12 {
+	margin-bottom: 10px;
+}
+
+.tab-two-detais,
+.tab-one-detais {
+	margin: 23px 0 0 0;
+}
+
+.tab-two-detais .top-ion {
+	/*	margin-left: -30px;
+	margin-right: 10px;*/
+}
+
+.tab-two-detais .time-p {
+	font-weight: bold;
+}
+
+.tab-two-detais .work-experience ul li div:not(.enterprise-details-content) {
+	width: 100%;
+	min-height: 70px;
+	border-bottom: 1px solid #E4E4E4;
+	padding-top: 18px;
+}
+
+.idetify-btn {
+	position: absolute;
+	background: url(../img/zz_32.png) no-repeat left top;
+	width: 100px;
+	height: 37px;
+	display: block;
+	position: absolute;
+	right: -120px;
+	top: -10px;
+}
+
+.idetitag {
+	position: absolute;
+	right: 25px;
+	top: 0px;
+	width: 130px;
+	height: 130px;
+	background-color: #fff;
+	border-radius: 65px;
+	border: 1px solid #FEAF37;
+}
+
+.idetitag span {
+	display: block;
+	color: #CCCCCC;
+	text-align: center;
+	position: relative;
+	top: 40px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.idetitag button {
+	width: 64px;
+	margin-left: 32px;
+	margin-top: 12px;
+	eight: 28px;
+	text-align: center;
+	background-color: #E4E4E4 !important;
+	color: red !important;
+}
+
+.tab-one-detais .work-experience ul li div {
+	margin-top: 15px;
+}
+
+.tab-one-detais .work-experience ul li div:first-child p:first-child {
+	margin-left: -13px;
+}
+
+
+/*关于我们*/
+
+.about-us .nav-change li {
+	min-height: 53px;
+	line-height: 53px;
+	border-bottom: 1px solid #E4E4E4;
+	font-weight: bold;
+	padding: 10px 10px;
+}
+
+.about-us .nav-change li img {
+	width: 100%;
+}
+
+.about-us .nav-change li:last-child {
+	border: none;
+}
+
+.about-bg {
+	background-color: #33CCFF;
+	color: #fff;
+}
+
+.arrow {
+	position: absolute;
+	right: 0;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 16px solid transparent;
+	border-bottom: 16px solid transparent;
+	border-left: none;
+	border-right: 16px solid #fff;
+}
+
+
+/*.arrow:hover{
+        border-top:none;                  
+        border-bottom:50px solid #000;    
+    }*/
+
+.about-one span,
+.about-two span,
+.about-three span {
+	text-indent: 2em;
+	display: block;
+}
+
+.aboutus .about-one span {
+	display: inline;
+}
+
+.about-one .logo-span,
+.about-two .logo-span,
+.about-three .logo-span {
+	text-align: center;
+}
+
+.footer-two span {
+	display: inline-block;
+}
+
+.footer-two p {
+	font-weight: bold;
+}
+
+.footer-two {
+	margin-top: 15px;
+}
+
+.title-tag {
+	min-width: 100px;
+	text-align: right;
+	margin-right: -20px;
+}
+
+.nav-change li:not(:last-child) {
+	cursor: pointer;
+}
+
+
+/*在线咨询*/
+
+.online-content ul li,
+.aboutus .about-three ul li {
+	width: 100%;
+	min-height: 65px;
+	line-height: 65px;
+	display: inline-block;
+	border-bottom: 1px solid #e4e4e4
+}
+
+.onlin-left ul li {
+	min-height: 46px;
+	line-height: 46px!important;
+}
+
+.online-btn {
+	background-color: #33CCFF;
+	color: #fff;
+	min-width: 140px;
+	min-height: 40px;
+	border: 1px solid #33ccff;
+	margin-top: 10px;
+}
+
+.online-one-details .online-header h4,
+.about-three-details .online-header h4 {
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.online-one-details .online-header .online-div,
+.about-three-details .online-header .online-div {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+.online-one-details .online-header span {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.online-one-details .online-content {
+	text-indent: 2em;
+}
+
+
+/*人才培训*/
+
+.trainInfoTop {
+	display: flex;
+	min-height: 275px;
+}
+
+.trainInfoTop div {
+	flex: 1;
+	min-height: 275px;
+	padding: 0 10px;
+	margin: 15px 5px;
+}
+
+.trainInfoTop div:nth-child(1) {
+	border: 1px solid #ccc;
+	position: relative;
+}
+
+.trainInfoTop div img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	padding: 30px 60px;
+}
+
+.trainInfoTop div:nth-child(1) span {
+	display: inline-block;
+	position: absolute;
+	left: 160px;
+	top: 80px;
+	width: 87px;
+	height: 100px;
+	background: red;
+	line-height: 100px;
+	font-size: 18px;
+	color: #999999;
+}
+
+.trainInfoTop div:nth-child(2) h3 {
+	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 50px
+}
+
+.pbtn {
+	width: 143px;
+	height: 30px;
+	line-height: 30px;
+	background: inherit;
+	background-color: rgba(242, 242, 242, 1);
+	border: none;
+	border-radius: 4px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.trainInfoTop div:nth-child(2) p:nth-child(3) {
+	color: #ccc;
+	text-align: center;
+}
+
+.trainInfoTop div:nth-child(2) i {
+	font-size: 20px;
+	color: #666666;
+}
+
+.trainInfoTop div:nth-child(2) .Mtop {
+	margin: 20px 0;
+}
+
+.shuline {
+	padding: 0 10px;
+}
+
+.trainInfoTop .num {
+	color: rgb(255, 153, 0)!important;
+	font-family: "Arial Negreta", "Arial Normal", "Arial";
+	font-weight: 700;
+}
+
+.trainInfoTop div:nth-child(2) .pspanBtn span {
+	display: inline-block;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+}
+
+.lookVide0 {
+	width: 122px;
+	height: 40px;
+	background: inherit;
+	background-color: rgba(51, 153, 255, 1);
+	border-radius: 5px;
+}
+
+.count {
+	min-width: 119px;
+	height: 40px;
+	background: inherit;
+	background-color: rgba(51, 204, 153, 1);
+	border-radius: 5px;
+	margin: 0 10px;
+}
+
+.shop {
+	width: 128px;
+	height: 40px;
+	background: inherit;
+	background-color: rgba(255, 153, 0, 1);
+	border-radius: 5px;
+}
+
+.trainInfoCenter ul {
+	width: 100%;
+	height: 50px;
+	background-color: rgba(242, 242, 242, 1);
+	text-align: center;
+	line-height: 50px
+}
+
+.trainInfoCenter ul li {
+	float: left;
+	background-color: rgba(215, 215, 215, 1);
+	padding: 0 10px;
+	margin: 0 10px;
+	color: #333333;
+	cursor: pointer;
+}
+
+.trainInfoCenter ul li:nth-child(1) {
+	margin: 0 10px 0 0;
+}
+
+
+/*.trainInfoCenter ul li:hover{
+	 background-color:rgba(51, 153, 255, 1);
+	 color:#FFFFFF
+}*/
+
+.trainInfoCenter ul li.active {
+	background-color: rgba(51, 153, 255, 1);
+	color: #FFFFFF
+}
+
+.trainInfoCenter .show {
+	overflow: inherit;
+}
+
+.trainInfoCenter .hidden {
+	overflow: hidden;
+	height: 0!important
+}
+
+.supple-ul-div {
+	height: auto;
+}
+
+.zhangjie {
+	padding-left: 5px
+}
+
+.Coursechapters dl {
+	width: 100%;
+	text-align: left;
+	text-indent: 10px;
+}
+
+.Coursechapters dl dd {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #ccc
+}
+
+.Coursechapters dl dd span {
+	float: right;
+	margin-right: 30px
+}
+
+.online-one-details .online-footer {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.tab-one-detais i,
+.tab-two-detais i {
+	font-weight: 400;
+	font-style: normal;
+	font-size: 28px;
+	color: #FF6600;
+	text-indent: 20px;
+	line-height: 50px;
+	vertical-align: middle;
+	margin: 0 20px 0 0;
+}
+
+
+/*.enterprise-details-content{
+	display: none !important;
+}*/
+
+.enterprise-details ul {
+	margin-bottom: 40px;
+}
+
+.banner-details-img-wd {
+	max-width: 1000px;
+	height: 170px
+}
+
+.eacpet-work {
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+.eacpet-work-new {
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.eacpet-work p,
+.eacpet-work-new p {
+	color: #8C8C8C;
+}
+
+.eacpet-work-new p {
+	display: inline-block;
+}
+
+.talent-tag-span {
+	color: #000000;
+}
+
+span.talent-tag-span {
+	min-width: 100px;
+	display: inline-block;
+	height: 32px;
+	line-height: 32px;
+	margin: 15px;
+	border: 1px solid #d6d6d6;
+	text-align: center;
+	border-radius: 4px;
+	padding-left: 10px;
+	padding-right: 10px
+}
+
+.enght-c {
+	color: #000000;
+}
+
+.eacpet-work {
+	width: 400px;
+}
+
+.toaudit {
+	color: #FF6600;
+}
+
+.published {
+	color: #3333FF;
+}
+
+.topublish {
+	color: #33CCFF;
+}
+
+.green {
+	color: #008000 !important
+}
+
+.line-details {
+	border-top: 1px solid #d6d6d6;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+.work-span p {
+	font-weight: bold;
+	color: #000000;
+}
+
+.get-achievements {
+	margin-top: 30px;
+}
+
+.work-description p {
+	color: #8C8C8C;
+	font-weight: normal;
+}
+
+.blank-text {
+	color: #000000;
+}
+
+.gray-text {
+	color: #8C8C8C;
+}
+
+.compny-name {
+	color: #000000!important;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+.Name-tx {
+	float: left;
+	position: relative;
+}
+
+.float-r{
+	float: right;
+}

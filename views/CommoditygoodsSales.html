@@ -1,0 +1,21 @@
+<h3><i class="fa fa-map-marker"></i>{{$state.current.title}}</h3>
+<div class="panel panel-default" cg-busy="listBusyPromise">
+	<div class="panel-footer">
+		<div class="col-lg-12">
+			<form role="form" class="form-inline" ng-submit="fetchData()">
+				<div class="form-group">
+					<!-- <input type="text" id="datetimeStart" ng-model="searchOption.startTime" placeholder="开始时间" class="datepicker form-control" /> 至
+					<input type="text" id="datetimeEnd" placeholder="结束时间" ng-model="searchOption.endTime" class="datepicker form-control" /> -->
+					<label for="">最近月:</label>
+					<select ng-change="fetchData()" class="form-control" ng-model="searchOption.closeMonths" ng-options="x.Id as x.Name for x in States"></select>
+				</div>
+				<button type="submit" class="btn btn-default">查询</button>
+			</form>
+		</div>
+		<div class="row" style="margin-top:80px">
+			<div class="col-lg-12" id="myEcharts" style="height: 400px;">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END panel-->

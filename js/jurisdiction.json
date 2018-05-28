@@ -1,0 +1,507 @@
+{
+    "ShopKeeper": {
+        "auditManagement": {
+            "add": true,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },"auditManagementAudit": {
+            "add": true,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },"auditManagementDetails": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "shelvesManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "InteManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "storeInfomation": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "ordersManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "evaluationManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "evaluationManagementDetail": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "MemberSetting": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "PasswordModify": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "PermissionSetting": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "exchangeRules": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "useOfRules": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "CommoditySales": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "CommoditygoodsSales": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "CommodityStatistics": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        }
+    },
+    "Manager": {
+        "auditManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },"auditManagementAudit": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "auditManagementDetails": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "shelvesManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "InteManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "storeInfomation": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "ordersManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "evaluationManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "evaluationManagementDetail": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "MemberSetting": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "PasswordModify": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "PermissionSetting": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "exchangeRules": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "useOfRules": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "CommoditySales": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "CommoditygoodsSales": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "CommodityStatistics": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        }
+    },
+    "Clerk": {
+        "auditManagement": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },"auditManagementAudit": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "auditManagementDetails": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "shelvesManagement": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "InteManagement": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "storeInfomation": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "ordersManagement": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "evaluationManagement": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "evaluationManagementDetail": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "MemberSetting": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "PasswordModify": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false
+        },
+        "PermissionSetting": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false,
+            "reset": false
+        },
+        "exchangeRules": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false,
+            "reset": false
+        },
+        "useOfRules": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false,
+            "reset": false
+        },
+        "CommoditySales": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false,
+            "reset": false
+        },
+        "CommoditygoodsSales": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false,
+            "reset": false
+        },
+        "CommodityStatistics": {
+            "add": false,
+            "edit": false,
+            "delete": false,
+            "cancel": false,
+            "toggle": false,
+            "reset": false
+        }
+    },
+    "Owner": {
+        "auditManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },"auditManagementAudit": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "auditManagementDetails": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "shelvesManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "InteManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "storeInfomation": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "ordersManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "evaluationManagement": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "evaluationManagementDetail": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "MemberSetting": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "PasswordModify": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true
+        },
+        "PermissionSetting": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "exchangeRules": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "useOfRules": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "CommoditySales": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "CommoditygoodsSales": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        },
+        "CommodityStatistics": {
+            "add": true,
+            "edit": true,
+            "delete": true,
+            "cancel": true,
+            "toggle": true,
+            "reset": true
+        }
+    }
+}

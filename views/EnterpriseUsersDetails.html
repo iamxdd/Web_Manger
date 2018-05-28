@@ -1,0 +1,63 @@
+<h3>{{$state.current.title}}</h3>
+
+<div class="panel panel-default" cg-busy="listBusyPromise">
+	<i class="fa fa-arrow-left back-i" id="back-all-btn" onclick="javascript:history.back(-1)" aria-hidden="true"></i>
+	<div class="tab-two-detais row">
+		<div class="tab-header col-lg-3 col-md-4">
+			<img  alt=""  ng-src="{{enterData.IconUrl}}"/>
+		</div>
+		<div class="peple-infomation col-lg-9 col-md-8" style="margin-left: -48px;">
+			<div class="col-lg-12 col-md-12 Name-tx">
+				<div style="float: left;position: relative;">
+					<p class="compny-name">{{enterData.Name}}</p>
+					<span class="idetify-btn"  ng-if="enterData.CertificateState===3"></span>
+				</div>
+				<!--<p class="compny-name">{{enterData.Name}}</p>
+				<span class="idetify-btn" ng-if="enterData.CertificateState===3"></span>-->
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<p>性质：</p><span>{{PcService.numberToText(enterData.Nature,NatureStatus)}}</span>
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<p>规模：</p><span>{{PcService.numberToText(enterData.Scale,ScaleStatus)}}</span>
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<p>公司地址：</p><span>{{enterData.Address}}</span>
+			</div>
+			<div class="col-lg-12 col-md-12" style="margin-top: -3px;">
+				<p class="intorduce-detials">企业介绍：
+					<span>{{enterData.Introduction}}</span>
+				</p>
+				
+			</div>
+		</div>
+		<div class="work-experience col-lg-12 col-md-12 enterprise-details">
+
+			<h5><i class="fa fa-bookmark" aria-hidden="true"></i>企业需求</h5>
+			<ul>
+				<li ng-if="!DemandList||DemandList.length===0" class="none-demand">
+					暂无数据
+				</li>
+				<li ng-repeat="x in DemandList">
+					<div>
+						<p  ng-if="!x.heading" class="time-p col-lg-3 blank-text">{{x.Name}} </p>
+						<p ng-if="!x.heading" class="time-p col-lg-3  blank-text">{{x.Quantity}}</p>
+						<p ng-if="!x.heading" class="time-p col-lg-3  blank-text">{{x.Amount}}</p>
+						<p ng-if="!x.heading" class="time-p col-lg-3">
+							<!--<button class="btn btn-default see-details-btn  fa fa-chevron-down" type="button" ng-click="seeItem(x,$index)">查看详情</button>-->
+							<button ng-class="seeDeatils(x)" type="button" ng-click="seeItem(x,$index)" ng-bind="seeBtnText(x)"></button>
+
+						</p>
+						<div ng-if="x.heading" class="enterprise-details-content col-lg-12">
+							<p class="gray-text">任职要求:</p>
+							<span class="blank-text">{{x.list}}</span>
+						</div>
+					</div>
+
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+</div>

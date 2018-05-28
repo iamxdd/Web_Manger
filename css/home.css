@@ -1,0 +1,346 @@
+.col-header {
+	position: relative;
+}
+
+.headericon {
+	color: #000;
+	/*line-height: 1.5!important;
+	min-height: 55px!important;*/
+}
+.headerpop{
+	 color: rgb(187,200,216);
+	 font-size: 10px;
+	 padding-left: 30px;
+}
+.ahref{
+ color: rgb(141,187,235)!important;
+ line-height: 40px
+}
+
+.headerNav {
+	border-color: rgba(0, 0, 0, 0)!important;
+	border-radius: 3px;
+}
+
+.pv-lg {
+	text-align: center;
+	padding: 10px 0;
+}
+
+.headercomment {
+	display: inline-block;
+	position: absolute;
+	width: 20px;
+	height: 25px;
+	background: rgb(247, 80, 80);
+	top: -10px;
+	right: 3px;
+	text-align: center;
+}
+
+.Todo {
+	width: 100%;
+	min-height: 315px;
+	border: 1px solid #cfdbe2;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	margin: 0 auto;
+}
+
+.Todo-header {
+	height: 45px;
+	line-height: 44px;
+	border-bottom: 1px solid #cfdbe2;
+}
+
+.Todo-header .left {
+	display: inline-block;
+	border-right: 1px solid #cfdbe2;
+	width: 50px;
+	text-align: center;
+}
+
+.Todo-header .right {
+	font-size: 14px;
+	font-weight: 600;
+	padding-left: 10px
+}
+
+.Todo-contain .TodoTitle {
+	line-height: 60px;
+	border-bottom: 1px solid #cfdbe2;
+	font-size: 14px;
+}
+
+.Todo-contain .TodoAct {
+	line-height: 45px;
+}
+
+.Todo-contain .TodoAct div {
+	flex: 3;
+}
+
+.monthdata p{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	font-weight: 500;
+	color: rgb(255,84,2);
+	border-bottom:  1px solid #cfdbe2;
+	text-indent: 15px;
+}
+.monthCenter{
+	display: flex;
+	margin-top: -10px;
+}
+.monthCenter h4{
+	font-size: 22px;
+	color: #202133;
+	font-weight: 500
+}
+.monthCenter > div{
+	flex: 1;
+	text-align: center;
+	border-right:  1px solid #cfdbe2;
+	border-bottom: 1px solid #cfdbe2;
+	min-height: 78px;
+}
+.monthCenter div:last-child{
+	border-right:  0;
+}
+.Todo-contain .TodoAct div span {
+	font-size: 14px;
+	font-weight: 600;
+	padding-left: 10px
+}
+
+.echartsFooter {
+	/*max-height: 360px;*/
+	display: flex;
+}
+.echartsFooter >div{
+	flex:1;
+}
+.echartsFooter .monthdata:nth-child(1){
+	border-top: 1px solid #cfdbe2; 
+}
+.echartsFooter .monthdata{
+	min-height: 120px;
+	border-left: 1px solid #cfdbe2;
+	border-right: 1px solid #cfdbe2;
+	
+}
+/*设置*/
+
+.pointer {
+	font-size: 24px;
+	margin-right: 10px;
+}
+
+
+/*设置/密码修改*/
+
+.inputPlay {
+	display: inline-block!important;
+	width: 250px!important;
+}
+
+.divRight {
+	text-align: right;
+	width: 80px;
+}
+
+.buttonBottom {
+	text-align: center!important;
+	height: 300px!important;
+}
+
+.hengxian {
+	width: 96%;
+	margin: 0 auto;
+	border-bottom: 1px solid #CDCDCD;
+}
+
+.divLeft {
+	width: 70px;
+	text-align: right;
+}
+
+.row-right {
+	margin-left: 60px!important;
+}
+
+.iHeight {
+	line-height: 35px!important;
+}
+
+.main-box .main-box-header {
+	/*text-align: center;*/
+	display: table;
+	/*background: red;*/
+	margin: 0 auto;
+}
+.main-box .main-box-header dt{
+	width: 80px;
+	height: 80px;
+	background: url(img/dog.jpg)no-repeat;
+}
+.main-box-header dd,.spanName,.main-box-footer span{
+	color: rgb(135,143,151);
+}
+.main-box-footer h4{
+	font-weight: bold;
+}
+
+.main-box-header h5 {
+	text-align: left;
+}
+.main-box-center{
+	min-height: 35px;
+	padding-left: 15px
+}
+.main-box-center .spanYellow{
+	display: inline-block;
+	color:#fff;
+	width: 70px;
+	height: 20px;
+	border-radius: 15px;
+	padding-left:15px;
+	line-height: 20px;
+	background: #ff5402;
+}
+.main-box-footer{
+	width: 100%;
+	padding-top: 15px;
+	display: flex;
+	padding-left: 5px
+}
+.main-box-footer div{
+	flex: 1;
+	text-align: center;
+}
+.main-box-footer div:nth-child(1){
+	border-right: 1px solid #ddd
+}
+.leftTop{
+	min-height: 330px
+}
+.leftFooter{
+	min-height: 550px;
+}
+.leftFooterHeader{
+	margin-bottom: 30px;
+}
+#myEcharts{
+	margin-top: 20px
+}
+.leftFooterHeader .todayData,.rightTop .todayData,.rightCenter .todayData,.rightCenter1 .todayData{
+   display: block;
+   text-align: center;
+   width: 150px;
+   height: 20px;
+   line-height: 20px;
+   font-size: 14px;
+   color: #babadb;
+   border-left: 5px solid rgb(255,84,2);
+   margin: 15px 0 5px 25px;
+}
+.panel-color{
+	background: rgb(17,28,60);
+	border-radius: 3px
+
+}
+.rightTop .todayData{
+	color:rgb(135,143,151);
+	margin: 15px 0 5px 30px;
+}
+.rightCenter .todayData,.rightCenter1 .todayData{
+	color: #fff;
+	text-align: left;
+	text-indent: 10px;
+	margin: 15px 0 5px 0px;
+}
+.rightCenter1 .todayData{
+	color:#000;
+}
+.leftFooterContent{
+	display: flex;
+	text-align: center;
+	border-top: 1px solid #ddd;
+	min-height:80px;
+	color: rgb(187,200,216);	
+}
+.leftFooterContent div{
+	flex:1;
+	height: 60px;
+	line-height: 40px;	
+	color: #a5b6c8;
+}
+.leftFooterContent h4{
+	font-weight: 500;
+	color: #202133;	
+}
+.leftFooterContent div:nth-child(1){
+	line-height: 80px;
+}
+.leftFooterContent:last-child{
+	border-bottom: 1px solid #ddd;
+}
+.rowColor{
+	color: rgb(255,84,2);
+}
+.rightCenter-box-footer{
+	display: flex;
+	text-align: center;
+}
+.rightCenter-box-footer1{
+	display: flex;
+	text-align: left;
+	text-indent: 60px;
+}
+.rightCenter-box-footer div,.rightCenter-box-footer1 div{
+	flex:1;
+	/*border-right-width: 3px;*/
+	
+}
+.rightCenter-box-footer div:last-child{
+	border:0;
+}
+.rightCenter-box-footer h4{
+	color: #ff5402;
+	font-size: 22px;
+	font-weight: 500;
+}
+.rightCenter-box-footer span{
+	color:#a5b6c8;
+}
+.rightCenter-box-footer1 span:nth-child(2){
+	font-size: 24px;
+	font-weight: 500;
+}
+.rightCenter-box-footer span:last-child{
+	float: right;
+	margin-top:-20px;
+}
+.rightCenter-box-footer1 span:last-child{
+	float: right;
+	margin-top:5px;
+	color: rgb(187,200,216);
+	/*font-size: 20px*/
+}
+.pannel-white{
+	background: #fff;
+	border-radius: 3px;
+}
+.pannel-white-footer{
+	background: #fff;
+	border-radius: 3px;
+	/*height: 430px;*/
+}
+.right .panel{
+	border-top-width: 0px!important;
+}
+.rightCenter-box-footer1 span:nth-child(1),.monthspan{
+	color: #a5b6c8;
+    font-size: 10px;
+}

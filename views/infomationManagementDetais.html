@@ -1,0 +1,96 @@
+<h3><i class="fa fa-map-marker"></i>{{$state.current.title}}</h3>
+<div class="panel panel-default" cg-busy="listBusyPromise">
+	<div class="ms-content">
+		<i class="fa fa-arrow-left back-i" id="back-all-btn" onclick="javascript:history.back(-1)" aria-hidden="true"></i>
+		<div class="text-right">
+			<div class="commodity-btn" ng-class="statusClass(news.AuditState)">
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<h4 class="details-header">
+				<div class="pull-right" ng-if="news.AuditState==2 || news.AuditState==4">
+					<button type="button" class="btn btn-default btn-xs" ng-click="creatOne(news)">
+	   				 	<span class="glyphicon glyphicon-edit"></span>
+					</button>
+				</div>
+			{{news.Title}}
+			</h4>
+		</div>
+		<div class="details-header-tags">
+			<span>{{news.PublisherName}}</span>
+			<span>{{news.CreatedAt|date:"yyyy-MM-dd HH:mm"}}</span>
+			<span>分享到</span>
+
+			<div class="jiathis_style_24x24 share-btns">
+				<a class="jiathis_button_cqq"></a>
+				<a class="jiathis_button_qzone"></a>
+				<a class="jiathis_button_tsina"></a>
+				<a class="jiathis_button_weixin"></a>
+				<!--<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>-->
+			</div>
+			<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+			<!-- JiaThis Button END -->
+		</div>
+		<div class="details-content">
+			<div class="details-img">
+				<img ng-src="{{news.Thumbnail}}" style="max-width: 100%; " />
+			</div>
+			<div class="details-text" ng-bind-html="news.Content">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END panel-->
+
+<!--添加-->
+<script type="text/ng-template" id="creatOne">
+	<div class="modal-header">
+		<h5 class="modal-title">{{TitleText}}前沿资讯</h5>
+	</div>
+	<div class="modal-body" id="add-advertisements" cg-busy="ngDialogPromise">
+		<form class="form-horizontal mycheckbox-inline " cg-busy="ngDialogPromise">
+
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label class="control-label col-lg-2">标题</label>
+					<div class=" col-lg-8">
+						<input type="text" ng-model="newss.Title" class="form-control" required placeholder="请输入标题" />
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label class="control-label col-lg-2">缩略图</label>
+					<div class=" col-lg-8">
+						<image-file-uploader uif-callback="configImageAfterUpload(url)" default-url="{{newss.Thumbnail}}"></image-file-uploader>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label class="control-label col-lg-2">分类标签</label>
+					<div class=" col-lg-8">
+						<div ng-repeat="x in tagType" class="infomation-tag-div" ng-click="isCheck(x,tagType)" data-Id="{{x.Id}}">
+							<span class="icon fa fa-check" ng-if="x.Checked"></span> {{x.Tag}}
+						</div>
+						<span class="introduce">(标签最多为三个)</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label class="control-label col-lg-2">内容</label>
+					<div class=" col-lg-10">
+						<textarea ui-kindeditor ng-model="newss.Content"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class=" col-lg-10 col-lg-offset-2">
+					<input type="button" ng-click="closeDialog(0)" class="btn btn-default" value="取消" />
+					<input type="button" ng-click="formSubmit(true)" class="btn btn-success" value="确 定" />
+				</div>
+			</div>
+		</form>
+	</div>
+</script>

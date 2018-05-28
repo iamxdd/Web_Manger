@@ -1,0 +1,99 @@
+<h3>{{$state.current.title}}</h3>
+
+<div class="panel panel-default" cg-busy="listBusyPromise">
+	<i class="fa fa-arrow-left back-i" id="back-all-btn" onclick="javascript:history.back(-1)" aria-hidden="true"></i>
+	<div class="tab-one-detais row">
+		<div class="talent-header-new col-lg-2 col-md-2">
+			<img ng-src="{{talentData.AvatarUrl}}" />
+		</div>
+		<div class="peple-infomation col-lg-10 col-md-10">
+			<div class="col-lg-6 col-md-6">
+				<p>姓名：</p><span>{{talentData.RealName}}</span>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<p>状态：</p><span>{{PcService.numberToText(talentData.StaffState,StaffState)}}</span>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<p>性别：</p><span>{{PcService.numberToText(talentData.Gender,Gender)}}</span>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<p>年龄：</p><span>{{talentData.Age}}</span>
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<p>政治面貌：</p><span>{{PcService.numberToText(talentData.PoliticsState,PoliticsState)}}</span>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<p>毕业院校：</p><span>{{talentData.GraduatedFrom}}</span>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<p>专业：</p><span>{{talentData.Profession}}</span>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<p>联系电话：</p><span>{{talentData.Phone}}</span>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<p>邮箱：</p><span>{{talentData.Email}}</span>
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<p>现居住地：</p><span>{{talentData.Address}}</span>
+			</div>
+			<div class="col-lg-12 col-md-12 peple-infomation-btn">
+				<p>标签：</p>
+				<span ng-repeat="x in Tags">{{x.Tag}}</span>
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<p>个人描述：</p>
+				<span class="talen-description">	{{talentData.Description}}	</span>
+			</div>
+		</div>
+		<div class="work-experience col-lg-12 col-md-12">
+			<h5><i class="fa fa-bookmark" aria-hidden="true"></i>工作经历</h5>
+			<div class="line-details"></div>
+			<ul ng-if="WorkExperiences.length !=0" class="work-span">
+				<li ng-repeat="Experiences in WorkExperiences">
+					<div>
+						<p class="time-p col-lg-4">{{Experiences.WorkStart | date:"yyyy-MM-dd HH:mm"}} ~{{Experiences.WorkEnd | date:"yyyy-MM-dd HH:mm"}} </p>
+						<p class="time-p col-lg-4">{{Experiences.CompanyName}}</p>
+						<p class="time-p col-lg-4">{{Experiences.JobTitle}}</p>
+					</div>
+					<div class="work-description">
+						<p>工作描述:</p>
+						<span class="blank-text">{{Experiences.JobDescription}}</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="work-experience col-lg-12 col-md-12">
+			<h5><i class="fa fa-bookmark" aria-hidden="true"></i>期望工作</h5>
+			<div class="line-details"></div>
+			<div ng-repeat=" x in JobList">
+				<div class="eacpet-work-new">
+					<p><span style="color:red;">*</span>行业</p>
+					<span class="talent-tag-span">{{x.IndustryNames}}</span>
+				</div>
+				<div class="eacpet-work">
+					<p><span style="color:red;">*</span>
+						<span>工作地点:</span>
+						<span class="enght-c">{{x.ExpectedWorkingPlaceName}}</span>
+					</p>
+
+				</div>
+				<div class="eacpet-work">
+					<p><span style="color:red;">*</span>
+						<span>期望企业:</span>
+						<span class="enght-c">{{x.EnterpriseNatureName}}</span>
+					</p>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="get-achievements  col-lg-12 col-md-12">
+			<h5><i class="fa fa-bookmark" aria-hidden="true"></i>获得成就</h5>
+			<div class="line-details"></div>
+			<span ng-repeat="x in Achievements">{{x}}</span>
+		</div>
+
+	</div>
+
+</div>

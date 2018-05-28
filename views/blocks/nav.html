@@ -1,0 +1,65 @@
+<!-- list -->
+<style>
+	.nav.nav-sub li ul.submenu {
+		padding: 0;
+		margin: 0;
+		padding-left: 10px;
+		height: 0;
+		overflow: hidden;
+	}
+	
+	.nav.nav-sub .active ul.submenu {
+		padding: 0;
+		margin: 0;
+		padding-left: 10px;
+		height: auto!important;
+	}
+</style>
+<!--<div class='useLogo'>
+	<div class="userPhoto">
+		<img src="img/logo.png" alt="">
+	</div>
+	<div class="useNameDiv">
+		<span class="useName">{{PcService.subStrDescribe(user.name,5)}}</span></br>
+		<span>您好：</span>管理员
+		<span class="lock-btn" title="密码修改" ng-click="modifyPassword()"><i class="fa fa-unlock-alt"></i></span>
+	</div>
+</div>-->
+<ul class="nav nav-new">
+	<li ng-repeat="x in navLi" class="st-li" ng-class="x.show ? 'active' : '' " ng-if="isAllOn(x,x.submenu) && x.title!='首页'">
+		<a href class="auto" ng-if="x.submenu.length>0">
+			<span class="pull-right text-muted">
+		       <!-- <i class="fa fa-fw fa-angle-right text"></i>-->
+		       <!-- <i class="fa fa-fw fa-angle-down text-active"></i>-->
+     		 </span>
+			<!--<i ng-class="{{'x.icon'}}"></i>-->
+			<span class="font-bold">{{x.title}}</span>
+		</a>
+
+		<a ng-if="x.submenu.length===0" ui-sref={{x.url}}>
+			<!--<i ng-class="{{'x.icon'}}"></i>-->
+			<span class="font-bold" ui-sref={{x.url}}>{{x.title}}</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<li ui-sref-active="active" ng-repeat="y in x.submenu" ng-if="y.on">
+				<a ng-if="y.submenu.length==0" ui-sref={{y.url}}>
+					<span>{{y.title}}</span>
+				</a>
+				<a ng-if="y.submenu.length!==0" href class="auto">
+					<span class="pull-right text-muted">
+				       <!-- <i class="fa fa-fw fa-angle-right text"></i>-->
+				    <!--    <i class="fa fa-fw fa-angle-down text-active"></i>-->
+				     </span>
+					<span class="font-bold">{{y.title}}</span>
+				</a>
+				<ul ng-if="y.submenu.length!==0" class="submenu">
+					<li ng-repeat="z in y.submenu">
+						<a ui-sref={{z.url}}>
+							<span>{{z.title}}</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>

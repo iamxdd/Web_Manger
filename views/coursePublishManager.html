@@ -1,0 +1,76 @@
+<h3><i class="fa fa-map-marker"></i>{{$state.current.title}}</h3>
+<div class="panel panel-default" cg-busy="listBusyPromise">
+	<div class="panel-footer">
+		<div class="row">
+			<div class="col-lg-9">
+				<form role="form" class="form-inline" ng-submit="fetchData()">
+					<!--<div class="form-group multiline col-lg-3">
+						<label for="usertype">类型标签：</label>
+						<select id="maxOption2"  name="usertype" class="selectpicker col-lg-3 show-tick form-control" multiple data-live-search="false">
+							<option value="" ng-repeat="x in tagType">{{x.Name}}</option>
+						</select>
+					</div>-->
+					<div class="form-group multiline">
+						<label for="input-status">状态：</label>
+						<select id="input-status" ng-change="fetchData()" ng-model='searchOption.state' class="form-control" ng-options='a.Id as a.Name for a in statusType'>
+						</select>
+					</div>
+					
+					<div class="form-group multiline">
+						<label for="input-keyword" class="sr-only">关键字：</label>
+						<input id="input-keyword" type="text" ng-model="searchOption.value" placeholder="请输入标题" class="form-control inputIn" />
+					</div>
+					<div class="form-group multiline">
+						<button type="submit" class="btn btn-default">查询</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- START table-responsive-->
+	<div class="table-responsive">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>标题</th>
+					<!--<th>类型标签</th>-->
+					<!--<th>发布人</th>-->
+					<th>状态</th>
+					<th>时间</th>
+					<th>操作</th>
+				</tr>
+
+			</thead>
+			<tbody>
+				<tr ng-if="!list||list.length===0">
+					<td colspan="20">暂无任何数据！</td>
+				</tr>
+				<tr ng-repeat="x in list">
+					<td>{{$index+1}}</td>
+					<td title="{{x.Traning.Name}}" class="td-hidden">{{x.Traning.Name}}</td>
+					<!--<td>{{x.Traning.TrainCategory}}</td>-->
+					<!--<td>{{x.Traning.Publisher}}</td>-->
+					<td>{{PcService.numberToText(x.Traning.PublishState,statusType)}}</td>
+					<td>{{x.Traning.CreatedAt| date:"yyyy-MM-dd HH:mm"}}</td>
+					<td>
+						<button type="button" ng-if="x.Traning.PublishState==1" ng-click="publishItem(x.Traning)" class="btn btn-success">发布</button>
+						<button type="button" ng-if="x.Traning.PublishState== 2 && x.Traning.OpenState==1" ng-click="toggleItem(x.Traning)" class="btn btn-danger">关闭</button>
+						<button type="button" ng-click="seeDetail(x)" class="btn btn-default">查看详情</button>
+					
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+	<!-- END table-responsive-->
+	<div class="panel-footer">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<paging page="pagination.page" page-size="pagination.pageSize" total="pagination.total" show-prev-next="true" show-first-last="true" paging-action="getListSpecifyPage(page,pageSize,total)">
+				</paging>
+			</div>
+		</div>
+	</div>
+</div>

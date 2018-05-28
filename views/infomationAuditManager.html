@@ -1,0 +1,79 @@
+<h3><i class="fa fa-map-marker"></i>{{$state.current.title}}</h3>
+<div class="panel panel-default" cg-busy="listBusyPromise">
+	<div class="panel-footer">
+		<div class="row">
+			<div class="col-lg-12">
+				<form role="form" class="form-inline" ng-submit="fetchData()">
+					<div class="form-group multiline info-classfy">
+						<label for="usertype">类型标签：</label>
+						<select id="maxOption2" name="usertype" class="selectpicker col-lg-3 show-tick form-control" multiple data-live-search="false" data-max-options="3">
+							<!--<option selected="selected" value="0">全部</option>-->
+							<option value="" ng-repeat="x in tagType" value="{{x.Id}}">{{x.Tag}}</option>
+						</select>
+					</div>
+					<div class="form-group multiline">
+						<label for="input-status">状态：</label>
+						<select id="input-status" ng-change="fetchData()" ng-model='searchOption.auditState' class="form-control" ng-options='a.Id as a.Name for a in statusType'>
+						</select>
+					</div>
+					<div class="form-group multiline">
+						<label for="input-keyword" class="sr-only">关键字：</label>
+						<input id="input-keyword" type="text" ng-model="searchOption.value" placeholder="请输入资讯标题内容" class="form-control inputIn" />
+					</div>
+					<div class="form-group multiline">
+						<button type="submit" class="btn btn-default">查询</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+	<!-- START table-responsive-->
+	<div class="table-responsive">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>标题</th>
+					<th>类型标签</th>
+					<th>发布人</th>
+					<th>状态</th>
+					<th>时间</th>
+					<th>操作</th>
+				</tr>
+
+			</thead>
+			<tbody>
+				<tr ng-if="!list||list.length===0">
+					<td colspan="20">暂无任何数据！</td>
+				</tr>
+				<tr ng-repeat="x in list">
+					<td>{{$index+1}}</td>
+					<td title="{{x.Title}}" class="td-hidden">
+						{{x.Title}}
+					</td>
+					<td>{{x.TagList}}</td>
+					<td>{{x.PublisherName}}</td>
+					<td ng-class="tdClass(x.AuditState)">{{PcService.numberToText(x.AuditState,statusType)}}</td>
+					<td>{{x.CreatedAt|date:"yyyy-MM-dd HH:mm"}}</td>
+					<td>
+						<button ng-if="x.AuditState==1" class="btn btn-success" ng-click="auditItem(x,1)">通过</button>
+						<button ng-if="x.AuditState==1" class="btn btn-danger"  ng-click="auditItem(x,2)">不通过</button>
+						<button type="button" ng-click="seeDetail(x)" class="btn btn-default">查看详情</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- END table-responsive-->
+	<div class="panel-footer">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<paging page="pagination.page" page-size="pagination.pageSize" total="pagination.total" show-prev-next="true" show-first-last="true" paging-action="getListSpecifyPage(page,pageSize,total)">
+				</paging>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END panel-->
+<!--添加-->

@@ -1,0 +1,137 @@
+<h3><i class="fa fa-map-marker"></i>{{$state.current.title}}</h3>
+<div class="panel panel-default" cg-busy="listBusyPromise">
+	<div class="panel-footer">
+		<div class="row">
+			<div class="col-lg-9">
+				<form role="form" class="form-inline" ng-submit="fetchData()">
+					<div class="form-group multiline info-classfy">
+						<label for="usertype">类型标签：</label>
+						<select id="maxOption2" name="usertype" class="selectpicker col-lg-3 show-tick form-control" multiple data-live-search="false" data-max-options="3">
+							<!--<option selected="selected" value="0">全部</option>
+							--><option value="" ng-repeat="x in tagType" value="{{x.Id}}">{{x.Tag}}</option>
+						</select>
+					</div>
+					<div class="form-group multiline">
+						<label for="input-status">状态：</label>
+						<select id="input-status" ng-change="fetchData()" ng-model='searchOption.auditState' class="form-control" ng-options='a.Id as a.Name for a in statusType'>
+						</select>
+					</div>
+					<div class="form-group multiline">
+						<label for="input-keyword" class="sr-only">关键字：</label>
+						<input id="input-keyword" type="text" ng-model="searchOption.value" placeholder="请输入资讯标题内容" class="form-control inputIn" />
+					</div>
+					<div class="form-group multiline">
+						<button type="submit" class="btn btn-default">查询</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-lg-3 pull-right text-right">
+				<button type="button" ng-click="creatOne()" class="btn btn-success ng-binding">添加</button>
+			</div>
+		</div>
+	</div>
+	<!-- START table-responsive-->
+	<div class="table-responsive">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>标题</th>
+					<th>类型标签</th>
+					<th>发布人</th>
+					<th>状态</th>
+					<th>时间</th>
+					<th>操作</th>
+				</tr>
+
+			</thead>
+			<tbody>
+				<tr ng-if="!list||list.length===0">
+					<td colspan="20">暂无任何数据！</td>
+				</tr>
+				<tr ng-repeat="x in list">
+					<td>{{$index+1}}</td>
+					<td title="{{x.Title}}">
+						<div max-width="300">
+							<a ui-sref="app.infomationManagementDetais({Id:x.Id})">{{x.Title}}</a>
+						</div>
+					</td>
+					<td>{{x.TagList}}</td>
+					<td>{{x.PublisherName}}</td>
+					<td ng-class="tdClass(x.AuditState)">{{PcService.numberToText(x.AuditState,statusType)}}</td>
+					<td>{{x.CreatedAt|date:"yyyy-MM-dd HH:mm"}}</td>
+					<td>
+						<button type="button"  ng-if="x.AuditState==2 || x.AuditState==4 " ng-click="creatOne(x)" class="btn btn-default">修改</button>
+						<button type="button" ng-if="x.AuditState=== 1 || x.AuditState === 2 ||x.AuditState === 4" ng-click="toggleItem(x)" class="btn" ng-class="isToggle(x)" ng-bind="toggleText(x)"></button>
+						<button type="button" ng-if="x.AuditState==2 || x.AuditState==4 " ng-click="deleteItem(x)" class="btn btn-danger">删除</button>
+						<button type="button" ng-click="seeDetail(x)" class="btn btn-default">查看详情</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--<textarea ui-kindeditor ng-model="news.Content" ng-init="news.Content=''"></textarea>-->
+	</div>
+	<!-- END table-responsive-->
+	<div class="panel-footer">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<paging page="pagination.page" page-size="pagination.pageSize" total="pagination.total" show-prev-next="true" show-first-last="true" paging-action="getListSpecifyPage(page,pageSize,total)">
+				</paging>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END panel-->
+<!--添加-->
+<script type="text/ng-template" id="creatOne">
+	<div class="modal-header">
+		<h5 class="modal-title">{{TitleText}}前沿资讯</h5>
+	</div>
+	<div class="modal-body" id="add-advertisements" cg-busy="ngDialogPromise">
+		<form class="form-horizontal mycheckbox-inline " cg-busy="ngDialogPromise">
+
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label class="control-label col-lg-2">标题</label>
+					<div class=" col-lg-8">
+						<input type="text" ng-model="news.Title"   maxlength="50" class="form-control" required placeholder="请输入标题" />
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label class="control-label col-lg-2">缩略图</label>
+					<div class=" col-lg-8">
+						<image-file-uploader uif-callback="configImageAfterUpload(url)" default-url="{{news.Thumbnail}}"></image-file-uploader>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label class="control-label col-lg-2">分类标签</label>
+					<div class=" col-lg-8">
+						<div ng-repeat="x in tagType" class="infomation-tag-div" ng-click="isCheck(x,tagType)" data-Id="{{x.Id}}">
+							<span class="icon fa fa-check" ng-if="x.Checked"></span> {{x.Tag}}
+						</div>
+						<span class="introduce">(标签最多为三个)</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label class="control-label col-lg-2">内容</label>
+					<div class=" col-lg-10">
+						<!--<div text-angular="" ng-model="news.Content" name="wysiswyg-editor" class="btn-group-small" ng-disabled="disabled"></div>-->
+						<textarea ui-kindeditor ng-model="news.Content" required="required"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class=" col-lg-10 col-lg-offset-2">
+					<input type="button" ng-click="closeDialog(0)" class="btn btn-default" value="取消" />
+					<input type="button" ng-click="formSubmit(true)" class="btn btn-success" value="确 定" />
+				</div>
+			</div>
+		</form>
+	</div>
+</script>

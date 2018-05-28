@@ -1,0 +1,26 @@
+<h3><i class="fa fa-map-marker"></i>{{$state.current.title}}</h3>
+<div class="panel panel-default" cg-busy="listBusyPromise">
+	<i class="fa fa-arrow-left back-i" id="back-all-btn" onclick="javascript:history.back(-1)" aria-hidden="true"></i>
+	<div class="col-lg-12">
+		<h4 class="details-header">{{newData.Title}}</h4>
+	</div>
+	<div class="details-header-tags">
+		<span>{{newData.CreatedByName}}</span>
+		<span>{{newData.CreatedAt|date:"yyyy-MM-dd HH:mm"}}</span>
+		<span>分享到</span>
+		<div class="jiathis_style_24x24 share-btns">
+			<a class="jiathis_button_cqq"></a>
+			<a class="jiathis_button_qzone"></a>
+			<a class="jiathis_button_tsina"></a>
+			<a class="jiathis_button_weixin"></a>
+			<!--<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>-->
+		</div>
+		<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+	</div>
+	<div style="margin-top:15px">
+		<div class="details-content" ng-bind-html="newData.Content">
+		</div>
+	</div>
+
+</div>
+<!-- END panel-->

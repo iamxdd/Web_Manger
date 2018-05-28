@@ -1,0 +1,102 @@
+<h3><i class="fa fa-map-marker"></i>{{$state.current.title}}</h3>
+<div class="panel panel-default" ng-controller="PermissionSettingCtrl" cg-busy="listBusyPromise">
+	<div class="panel-footer">
+		<div class="row">
+			<div class="col-lg-9">
+				<form role="form" class="form-inline" ng-submit="fetchData()">
+					<div class="form-group multiline">
+						<label for="input-keyword" class="sr-only">关键字：</label>
+						<input id="input-keyword" type="text" ng-model="searchOption.value" placeholder="请输入关键字" class="form-control inputIn" />
+					</div>
+					<div class="form-group multiline">
+						<button type="button" ng-click="fetchData()" class="btn btn-default">查询</button>
+					</div>
+
+				</form>
+			</div>
+			<div class="col-lg-3 pull-right text-right" ng-if="jurisdiction.add">
+				<button type="button" ng-click="creatOne()" class="btn btn-success">添加</button>
+			</div>
+		</div>
+	</div>
+	<!-- START table-responsive-->
+	<div class="table-responsive">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>账号</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>角色</th>
+					<th>时间</th>
+					<th>备注</th>
+					<th class="text-center">操作</th>
+				</tr>
+
+			</thead>
+			<tbody>
+				<tr ng-if="!list||list.length===0">
+					<td colspan="20">暂无任何数据！</td>
+				</tr>
+				<tr ng-repeat="x in list">
+					<td>{{$index+1}}</td>
+					<td class="td-hiddens-name" title="{{x.AccountName}}">{{x.AccountName}}</td>
+					<td>{{x.Name}}</td>
+					<td>{{x.Sex}}</td>
+					<td>{{x.Role}}</td>
+					<td>{{x.CreatedAt|date:"yyyy-MM-dd HH:mm"}}</td>
+					<td title="{{x.Remarks}}">{{PcService.subStrDescribe(x.Remarks)}}</td>
+					<td class="text-center">
+						<button type="button" ng-click="sureReset(x)" class="btn btn-primary" ng-if="jurisdiction.reset">重置密码</button>
+						<button type="button" ng-click="creatOne(x)" class="btn btn-primary" ng-if="jurisdiction.edit">配置权限</button>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+	<!-- END table-responsive-->
+	<div class="panel-footer">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<paging page="pagination.page" page-size="pagination.pageSize" total="pagination.total" show-prev-next="true" show-first-last="true" paging-action="getListSpecifyPage(page,pageSize,total)">
+				</paging>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- createOne  start -->
+<script type="text/ng-template" id="createOne">
+	<div class="modal-header">
+		<h5 class="modal-title">{{TitleText}}</h5>
+	</div>
+	<div class="modal-body" cg-busy="ngDialogPromise">
+		<form class="form-horizontal">
+			<div class="form-group col-lg-12" ng-repeat="x in fieldsList">
+				<label class="control-label col-lg-3">{{x.nameDisplay}}</label>
+				<div class=" col-lg-9" >
+					<input type="text" ng-model="x.value"   class="form-control" placeholder=请输入{{x.nameDisplay}} ng-disabled="x.editable" maxlength={{x.maxlength}} ng-if="x.editor==='normal'"/>
+				</div>
+				<div class=" col-lg-9">
+					<select   ng-if="x.editor==='select' && x.unit" ng-model="x.value" class="form-control" ng-options='x.Id as x.Name for x in x.opts' ng-disabled="x.editable" ng-change="getMemberName(x.value,x.opts)"></select>
+					<select   ng-if="x.editor==='select' && !x.unit" ng-model="x.value" class="form-control" ng-options='x.Id as x.Name for x in x.opts' ng-disabled="x.editable" ></select>
+				</div>
+				<div class=" col-lg-9" ng-if="x.editor==='textarea'">
+					<textarea   ng-model="x.value" class="form-control" ></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-9 col-lg-offset-3">
+					<button class="btn btn-success" ng-click="formSubmit()">确 定</button>
+					<button class="btn btn-default" ng-click="closeThisDialog(0)">取 消</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</script>
+
+<!-- createOne  end -->

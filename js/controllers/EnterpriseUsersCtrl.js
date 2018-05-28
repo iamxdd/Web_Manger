@@ -1,0 +1,239 @@
+app.controller('EnterpriseUsersCtrl', ['$scope', '$state', '$q', '$rootScope', '$http', 'ngDialog', 'PagerExtends', 'layerAlert', '$filter', 'PcService', 'serverUrls',
+	function($scope, $state, $q, $rootScope, $http, ngDialog, PagerExtends, layerAlert, $filter, PcService, serverUrls) {
+
+		$scope.list = [];
+		$scope.PcService = PcService;
+		$scope.searchOption = {
+			value: '',
+			openState: 0,
+			certificateState: 0,
+			startTime: $filter('date')("", "yyyy-MM-dd"),
+			endTime: $filter('date')("", "yyyy-MM-dd")
+		};
+		$scope.openState = [{
+			Name: '全部',
+			Id: 0
+		}, {
+			Name: '开启',
+			Id: 1
+		}, {
+			Name: '已关闭',
+			Id: 2
+		}];
+
+		//认证状态：0--所有，1--未认证，3--已认证
+		$scope.certType = [{
+			Name: '全部',
+			Id: 0
+		}, {
+			Name: '未认证',
+			Id: 1
+		}, {
+			Name: '已认证',
+			Id: 3
+		}];
+
+		//数字转文字
+		$scope.numberToText = function(id, _arrry) {
+			var _text = "";
+			_arrry.forEach(function(item, index) {
+				if (typeof id === "boolean") {
+					id = id.toString();
+				}
+				if (item.index === id) {
+					_text = item.value;
+				}
+			});
+			_text = _text === "全部" ? "" : _text;
+			return _text;
+		};
+
+
+		//时间插件  开始时间	
+		$("#startAttime").datetimepicker({
+			language: 'zh-CN',
+			weekStart: 1,
+			minView: "month",
+			todayBtn: 1,
+			autoclose: 1,
+			todayHighlight: 1,
+			startView: 2,
+			forceParse: 0,
+			format: "yyyy-mm-dd",
+			showMeridian: 1
+		}).on("click", function(ev) {
+			$("#startAttime").datetimepicker();
+		});
+
+		//时间插件  结束时间	
+		$("#endAtAttime").datetimepicker({
+			language: 'zh-CN',
+			weekStart: 1,
+			minView: "month",
+			todayBtn: 1,
+			autoclose: 1,
+			todayHighlight: 1,
+			startView: 2,
+			forceParse: 0,
+			format: "yyyy-mm-dd",
+			showMeridian: 1
+		}).on("click", function(ev) {
+			$("#endAtAttime").datetimepicker();
+		});
+		//初始化新增项
+		var initNewsForms = function(obj) {
+			if (typeof obj === "object") {
+				obj.Title = "";
+				obj.Content = "";
+				obj.MainPic = "";
+				//object.ChannelType = "";
+				obj.CategoryId = $scope.categoryCodes[0].Id;
+				$scope.publicationScope.map(function(v) {
+					v.Checked = false;
+				});
+			}
+		};
+
+		//查看详情
+		$scope.seeDetail = function(x) {
+			if(x.Id==0){
+				layerAlert.autoclose("未完善基本信息!");
+				return false;
+			}
+			$scope.DetailsData = JSON.stringify(x);
+			$state.go("app.EnterpriseUsersDetails", {
+				object: $scope.DetailsData
+			});
+		};
+
+		//获取后台人员列表
+		$scope.fetchData = function() {
+			PagerExtends.regListSpecifyPage($scope, {
+				apiUrl: serverUrls.getCorporationList,
+				params: $scope.searchOption,
+				success: function(response) {
+					$scope.list = response;
+				},
+				error: function(error) {
+					layerAlert.autoclose(PcService.errorResult(error));
+				}
+			}, $rootScope.pHeader);
+		};
+
+		$scope.fetchData();
+
+		//删除企业信息
+		$scope.deleteItem = function(x) {
+
+			layerAlert.checkone("选择操作", function() {
+				$scope.listBusyPromise = $http({
+					headers: $rootScope.pHeader,
+					method: "delete",
+					url: serverUrls.deletecorporations + "?idstring=" + x.Id
+				}).success(function(response) {
+					var Code = response.State.Code;
+					var Message = response.State.Message;
+					if (Code === 0) {
+						layerAlert.autoclose("删除成功！");
+						$scope.fetchData();
+					} else {
+						layerAlert.autoclose(PcService.errorResult(Message));
+					}
+				}).error(function(error) {
+					layerAlert.autoclose(PcService.errorResult(error));
+				});
+			}, function() {
+				return;
+			}, "确定", "取消", true, true, "确定要删除吗?");
+
+		};
+
+		//开启或者关闭
+		$scope.toggleText = function(x) {
+			var showText = "";
+			if (x.OpenState === 1) {
+				showText = "关闭";
+			} else if (x.OpenState === 2) {
+				showText = "开启";
+			}
+			return showText;
+		};
+
+		//开启关闭class
+		$scope.isToggle = function(x) {
+			return {
+				"btn-success": x.OpenState === 2,
+				"btn-danger": x.OpenState === 1,
+			};
+		};
+
+		//开启关闭操作
+		$scope.toggleItem = function(x) {
+			var data = angular.copy(x);
+			var state = "",
+				Action = "";
+			switch (data.OpenState) {
+				case 1:
+					state = 2;
+					stateText = "关闭"
+					break;
+				case 2:
+					state = 1;
+					stateText = "开启"
+					break;
+			}
+			var param = {
+				"Id": data.Id,
+				"MemberId":x.MemberId,
+				"OpenState": state
+			}
+			console.log(param);
+			$scope.listBusyPromise = $http({
+				headers: $rootScope.pHeader,
+				method: "put",
+				data: param,
+				url: serverUrls.corporationOpenstate
+			}).success(function(response) {
+				var Code = response.State.Code;
+				var Message = response.State.Message;
+				if (Code === 0) {
+					layerAlert.autoclose(stateText + "操作成功!");
+					$scope.fetchData();
+				} else {
+					layerAlert.autoclose(Message);
+				}
+
+			}).error(function(error) {
+				layerAlert.autoclose(PcService.errorResult(error));
+			});
+		};
+
+		//企业的认证
+		$scope.idetifyItem = function(x) {
+			var param = {
+				"Id": x.Id,
+				"CertificateState": 3
+			}
+			$scope.listBusyPromise = $http({
+				headers: $rootScope.pHeader,
+				method: "put",
+				data:param,
+				url: serverUrls.corporationCertificatestate + "?talentId=" + x.Id + "&memberId=" + x.memberId
+			}).success(function(response) {
+				var Code = response.State.Code;
+				var Message = response.State.Message;
+				if (Code === 0) {
+					layerAlert.autoclose("认证操作成功!");
+					$scope.fetchData();
+				} else {
+					layerAlert.autoclose(Message);
+				}
+
+			}).error(function(error) {
+				layerAlert.autoclose(PcService.errorResult(error));
+			});
+		};
+
+
+	}
+]);

@@ -1,0 +1,422 @@
+[
+	{
+		"icon": "fa fa-handshake-o",
+		"title": "首页",
+		"url": "app.home",
+		"active": "false",
+		"submenu": [
+			{
+				"icon": "fa fa-users",
+				"title": "首页",
+				"show": true,
+				"submenu": [
+					{
+						"url": "app.home",
+						"submenu": [],
+						"title": "首页",
+						"permission": [
+							"ApiTalentController_6c78a33dd4af47cfe8982c23a5adea9b_View",
+							"ApiTalentController_e365425a7f019467e433445024b58898_Delete",
+							"ApiTalentController_63aef5f17863ceadd37439a7814fa8ec_Add",
+							"ApiTalentController_2900c495fd3c1a378ea310ef37e28d62_Delete",
+							"ApiTalentController_d46d107f4db825965f590ad4634f43d4_Edit",
+							"ApiTalentController_762c48e911ee3319f5a7fe0479ecdc27_Edit"
+						]
+					}
+				]
+			}
+		]
+	}, {
+		"icon": "fa fa-users",
+		"title": "用户管理",
+		"url": "app.PersonalUser",
+		"active": "false",
+		"submenu": [
+			{
+				"icon": "fa fa-users",
+				"title": "用户管理",
+				"show": true,
+				"submenu": [
+					{
+						"url": "app.PersonalUser",
+						"submenu": [],
+						"title": "个人用户",
+						"permission": [
+							"ApiTalentController_6c78a33dd4af47cfe8982c23a5adea9b_View",
+							"ApiTalentController_e365425a7f019467e433445024b58898_Delete",
+							"ApiTalentController_63aef5f17863ceadd37439a7814fa8ec_Add",
+							"ApiTalentController_2900c495fd3c1a378ea310ef37e28d62_Delete",
+							"ApiTalentController_d46d107f4db825965f590ad4634f43d4_Edit",
+							"ApiTalentController_762c48e911ee3319f5a7fe0479ecdc27_Edit"
+						]
+					}, {
+						"url": "app.EnterpriseUsers",
+						"submenu": [],
+						"title": "企业用户",
+						"permission": [
+							"ApiTalentController_6c78a33dd4af47cfe8982c23a5adea9b_View",
+							"ApiTalentController_e365425a7f019467e433445024b58898_Delete",
+							"ApiTalentController_63aef5f17863ceadd37439a7814fa8ec_Add",
+							"ApiTalentController_2900c495fd3c1a378ea310ef37e28d62_Delete",
+							"ApiTalentController_d46d107f4db825965f590ad4634f43d4_Edit",
+							"ApiTalentController_762c48e911ee3319f5a7fe0479ecdc27_Edit"
+						]
+					}
+				]
+			}
+		]
+	}, {
+		"icon": "fa fa-newspaper-o",
+		"title": "资讯管理",
+		"url": "app.infomationManagement",
+		"active": "false",
+		"submenu": [
+			{
+				"icon": "fa fa-newspaper-o",
+				"title": "前沿资讯管理",
+				"show": true,
+				"submenu": [
+					{
+						"url": "app.infomationManagement",
+						"submenu": [],
+						"title": "资讯内容管理",
+						"permission": [
+							"ApiNewsController_f903039ca801bd9a7587f825ab34868b_View",
+							"ApiNewsController_c460bb035bcac99d031f7b0db2db9ac0_View",
+							"ApiNewsController_12db7f4e945734613822fe4c69d288c9_Add",
+							"ApiNewsController_6a521aedc1173794bcc31cd05844a164_Edit",
+							"ApiNewsController_2ed03e91ce515766f00f8e7583ee920e_Delete",
+							"ApiNewsController_f06f839647797392b9f6f9f961557613_Edit",
+							"ApiNewsController_1ce68276b80374edf49194b43eab0967_View"
+						]
+					}, {
+						"url": "app.infomationAuditManager",
+						"submenu": [],
+						"title": "资讯审核管理",
+						"permission": [
+							"ApiNewsController_2d24b01b0cd683728334c5cd62b159a8_View",
+							"ApiNewsController_cae358cee643e37d1aa7e00391f788eb_View",
+							"ApiNewsController_e9ed8a7e34f866231df2f097e91014d8_Edit",
+							"ApiNewsController_1ce68276b80374edf49194b43eab0967_View"
+						]
+					}, {
+						"url": "app.infomationPublish",
+						"submenu": [],
+						"title": "资讯发布管理",
+						"permission": [
+							"ApiNewsController_28a71fda3906c2b995a3fa7a71c0f4a0_View",
+							"ApiNewsController_f3c6098434fd0ad155f52596508de819_View",
+							"ApiNewsController_46bdbc694b2b916b1075a67405b4da35_Edit",
+							"ApiNewsController_1ce68276b80374edf49194b43eab0967_View"
+						]
+					}, {
+						"url": "app.infomationBrowseStatistics",
+						"submenu": [],
+						"title": "资讯浏览统计管理",
+						"permission": [
+							"ApiNewsController_28a71fda3906c2b995a3fa7a71c0f4a0_View",
+							"ApiNewsController_f3c6098434fd0ad155f52596508de819_View",
+							"ApiNewsController_46bdbc694b2b916b1075a67405b4da35_Edit",
+							"ApiNewsController_1ce68276b80374edf49194b43eab0967_View"
+						]
+					}
+				]
+			}
+		]
+	}, {
+		"icon": "fa fa-gavel",
+		"title": "评审管理",
+		"url": "app.PerfectFunction",
+		"active": "false",
+		"submenu": []
+	}, {
+		"icon": "fa fa-sitemap",
+		"title": "组织管理",
+		"url": "app.PerfectFunction",
+		"active": "false",
+		"submenu": []
+	}, {
+		"icon": "fa fa-graduation-cap",
+		"title": "知识管理",
+		"url": "app.PerfectFunction",
+		"active": "false",
+		"submenu": []
+	}, {
+		"icon": "fa fa-flag",
+		"title": "课程管理",
+		"url": "app.courseContentManager",
+		"active": "false",
+		"submenu": [
+			{
+				"icon": "fa fa-flag",
+				"title": "课程管理",
+				"show": true,
+				"submenu": [
+					{
+						"url": "app.courseContentManager",
+						"submenu": [],
+						"title": "课程内容管理",
+						"permission": [
+							"ApiTrainController_ee9cc5e8fc523d25aa1c59ac4771b271_View",
+							"ApiTrainController_56c365b0deb558113d5aefd175c93438_Delete",
+							"ApiTrainController_dcb090571a6eea5887fa36c4c7b13497_Add",
+							"ApiTrainController_dcb090571a6eea5887fa36c4c7b13497_Edit",
+							"ApiTrainController_0a6e4544586dea06c52f7210a55ef2d8_Edit"
+						]
+					}, {
+						"url": "app.courseAuditManager",
+						"submenu": [],
+						"title": "课程审核管理",
+						"permission": [
+							"ApiTrainController_9e864aa2766ea6215db75170a386d24d_View",
+							"ApiTrainController_b5684be4bdf41d2716244972f4daca71_Edit"
+						]
+					}, {
+						"url": "app.coursePublishManager",
+						"submenu": [],
+						"title": "课程发布管理",
+						"permission": [
+							"ApiTrainController_77f93a25c03867883960a1c154712bba_View",
+							"ApiTrainController_c031271bb9096455375352deb3b45dac_Edit",
+							"ApiTrainController_0a6e4544586dea06c52f7210a55ef2d8_Edit"
+						]
+					}, {
+						"url": "app.coursePlayManager",
+						"submenu": [],
+						"title": "课程播放统计管理",
+						"permission": [
+							"ApiUserController_98aadad3e77d2b0cf989fdf05d7e1068_Edit"
+						]
+					}
+				]
+			}
+		]
+	}, {
+		"icon": "fa fa-comments-o",
+		"title": "咨询管理",
+		"url": "app.townContentConsultation",
+		"active": "false",
+		"submenu": [
+			{
+				"icon": "fa fa-comments-o",
+				"title": "咨询管理",
+				"show": true,
+				"submenu": [
+					{
+						"url": "app.townContentConsultation",
+						"submenu": [],
+						"title": "区镇内容咨询"
+					}, {
+						"url": "app.countyContentConsultation",
+						"submenu": [],
+						"title": "县级内容咨询"
+					}, {
+						"url": "app.cityContentConsultation",
+						"submenu": [],
+						"title": "市级内容咨询"
+					}, {
+						"url": "app.provincContentConsultation",
+						"submenu": [],
+						"title": "省级内容咨询"
+					}
+				]
+			}
+		]
+	}, {
+		"icon": "fa fa-tasks",
+		"title": "流程管理",
+		"url": "app.PerfectFunction",
+		"active": "false",
+		"submenu": []
+	}, {
+		"icon": "fa fa-pie-chart",
+		"title": "平台信息",
+		"url": "app.TalentNetwork",
+		"active": "false",
+		"submenu": [
+			{
+				"icon": "fa fa-user-circle",
+				"title": "关于我们",
+				"show": "true",
+				"submenu": [
+					{
+						"url": "app.TalentNetwork",
+						"submenu": [],
+						"title": "人才网介绍",
+						"permission": [
+							"ApiHelpCentreController_bddef47c2f3c0ccac80117d46530723e_View",
+							"ApiHelpCentreController_989031b3b8783c65207e3efa3c65aa2f_Add"
+						]
+					}, {
+						"url": "app.EnterTalentNetwork",
+						"submenu": [],
+						"title": "加入人才网",
+						"permission": [
+							"ApiHelpCentreController_bddef47c2f3c0ccac80117d46530723e_View",
+							"ApiHelpCentreController_989031b3b8783c65207e3efa3c65aa2f_Add"
+						]
+					}
+				]
+			}, {
+				"icon": "fa fa-podcast",
+				"url": "app.PolicyAnnouncement",
+				"submenu": [],
+				"title": "政策与公告",
+				"permission": [
+					"ApiAnnouncementController_3d4b8e25815c888819f502670be80d9d_View",
+					"ApiAnnouncementController_a839400458850fb928a522f7461b4fe8_Edit",
+					"ApiAnnouncementController_4b235349e3c2d064cdb4731f5b8649fd_Delete"
+				]
+			}, {
+				"icon": "fa fa-hourglass",
+				"title": "入住中心",
+				"submenu": [
+					{
+						"url": "app.IndividualOccupancys",
+						"submenu": [],
+						"title": "个人入住",
+						"permission": [
+							"ApiHelpCentreController_bddef47c2f3c0ccac80117d46530723e_View",
+							"ApiHelpCentreController_989031b3b8783c65207e3efa3c65aa2f_Add"
+						]
+					}, {
+						"url": "app.PersonalAuthentication",
+						"submenu": [],
+						"title": "个人认证",
+						"permission": [
+							"ApiHelpCentreController_bddef47c2f3c0ccac80117d46530723e_View",
+							"ApiHelpCentreController_989031b3b8783c65207e3efa3c65aa2f_Add"
+						]
+					}
+				]
+			}, {
+				"icon": "fa fa-server",
+				"title": "客服服务中心",
+				"submenu": [
+					{
+						"url": "app.CommonProblem",
+						"submenu": [],
+						"title": "常见问题",
+						"permission": [
+							"ApiHelpCentreController_805a086c9330fd77fd7027903e5e6cc4_View",
+							"ApiHelpCentreController_f63f8461b09401f950f5e50ed9590e9b_Add",
+							"ApiHelpCentreController_4f690e4300170451af637a8397486b6b_Edit",
+							"ApiHelpCentreController_9fd5ebe8cbc68b0ce580c285be6e1d9d_Delete"
+						]
+					}, {
+						"url": "app.UserManual",
+						"submenu": [],
+						"title": "用户手册",
+						"permission": [
+							"ApiHelpCentreController_bddef47c2f3c0ccac80117d46530723e_View",
+							"ApiHelpCentreController_989031b3b8783c65207e3efa3c65aa2f_Add"
+						]
+					}, {
+						"url": "app.releaseRequirements",
+						"submenu": [],
+						"title": "需求发布须知",
+						"permission": [
+							"ApiHelpCentreController_bddef47c2f3c0ccac80117d46530723e_View",
+							"ApiHelpCentreController_989031b3b8783c65207e3efa3c65aa2f_Add"
+						]
+					}, {
+						"url": "app.SupplyMatching",
+						"submenu": [],
+						"title": "供需匹配",
+						"permission": [
+							"ApiHelpCentreController_bddef47c2f3c0ccac80117d46530723e_View",
+							"ApiHelpCentreController_989031b3b8783c65207e3efa3c65aa2f_Add"
+						]
+					}
+				]
+			}, {
+				"icon": "fa fa-link",
+				"title": "友情链接",
+				"submenu": [],
+				"url": "app.FriendshipLink",
+				"permission": [
+					"ApiHelpCentreController_ab295293b68255a69f07bc0f6ba035b2_View",
+					"ApiHelpCentreController_be92b22fb55047036a8add93f97f750d_Add",
+					"ApiHelpCentreController_b2a1ed2eab4954ffc06038cae764ca33_Edit",
+					"ApiHelpCentreController_3c8fbf5a72ee0c06d7f29825523a32ab_Delete"
+				]
+			}, {
+				"icon": "fa fa-certificate",
+				"title": "权威认证",
+				"submenu": [],
+				"url": "app.AuthoritativeCertification",
+				"permission": [
+					"ApiHelpCentreController_4fb7b319c3dcbed96c8915328db932fc_View",
+					"ApiHelpCentreController_ab6688676622cab6d6fddb262a5c5a95_Add",
+					"ApiHelpCentreController_19ba988ce3959b9b4664e1591978347e_Edit",
+					"ApiHelpCentreController_abfad1d9f16a231961a77112e69420e1_Delete"
+				]
+			}
+		]
+	}, {
+		"icon": "fa fa-cog",
+		"title": "设置",
+		"url": "app.TalentLabeSetting",
+		"active": "false",
+		"submenu": [
+			{
+				"icon": "fa fa-cog",
+				"title": "设置",
+				"show": true,
+				"submenu": [
+					{
+						"url": "app.TalentLabeSetting",
+						"submenu": [],
+						"title": "人才标签设置",
+						"permission": [
+							"ApiNewsController_1ce68276b80374edf49194b43eab0967_View",
+							"ApiTalentController_e365425a7f019467e433445024b58898_Delete",
+							"ApiNewsController_2890886393d1ad36bc8cd44bdc8396de_Add",
+							"ApiNewsController_8f625046b64bedd4ad27636a5b03ef2f_Edit"
+						]
+					}, {
+						"url": "app.TalentInfomationSetting",
+						"submenu": [],
+						"title": "前沿资讯分类标签设置",
+						"permission": [
+							"ApiNewsController_1ce68276b80374edf49194b43eab0967_View",
+							"ApiNewsController_8f625046b64bedd4ad27636a5b03ef2f_Edit",
+							"ApiNewsController_cc59f022255a1007a47aeeb79111bcdd_Delete",
+							"ApiNewsController_2890886393d1ad36bc8cd44bdc8396de_Add"
+						]
+					}, {
+						"url": "app.TalentCourseTypeSetting",
+						"submenu": [],
+						"title": "课程类型设置",
+						"permission": [
+							"ApiTrainController_e38e4c627e3015895ab525a0572c9aef_View",
+							"ApiTrainController_ac946fc583f6095e35c75471bd4faaca_View",
+							"ApiTrainController_d6d3ba91a466fd06f5b4e9efe647f59d_Delete",
+							"ApiTrainController_e38e4c627e3015895ab525a0572c9aef_Add",
+							"ApiTrainController_e38e4c627e3015895ab525a0572c9aef_Edit"
+						]
+					}, {
+						"url": "app.TalentBannerSetting",
+						"submenu": [],
+						"title": "banner广告设置",
+						"permission": [
+							"ApiHelpCentreController_434a06cd892413e458d252a00215d637_View",
+							"ApiHelpCentreController_dd338431b3c96d2dc8569b890f4d921b_View",
+							"ApiHelpCentreController_2220e610f6ce29426ed2a2f84af87a05_Add",
+							"ApiHelpCentreController_527a451493e91815602700f25dfa255d_Edit",
+							"ApiHelpCentreController_c50878e95cfbfd5bd09d8bf50ab50784_Delete",
+							"ApiHelpCentreController_57db1b6251f54a9fed1494f0ec2a3c87_Edit"
+						]
+					}, {
+						"url": "app.TalentPermissionsSetting",
+						"submenu": [],
+						"title": "权限设置",
+						"permission": [
+							"ApiHelpCentreController_434a06cd892413e458d252a00215d637_View"
+						]
+					}
+				]
+			}
+		]
+	}
+]

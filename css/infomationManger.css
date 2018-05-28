@@ -1,0 +1,506 @@
+body {
+	overflow-y: scroll;
+}
+
+.infomation-tag-div {
+	display: inline-block;
+	height: 32px;
+	line-height: 22px;
+	border: solid 1px #ddd;
+	margin: 0 20px 20px 0;
+	padding: 5px 15px;
+	border-radius: 3px;
+	cursor: pointer;
+	position: relative;
+}
+
+.infomation-tag-div span.icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #006611;
+}
+
+span.introduce {
+	color: #999999;
+}
+
+.checktag {
+	background-color: #008000;
+	color: #fff;
+}
+
+.correct-btn {
+	background-color: #Fff;
+	color: #219521;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	border-radius: 10px;
+	position: absolute;
+	top: -9px;
+	right: -6px;
+	border: 1px solid #ccc;
+}
+
+.details-header {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	margin-top: 30px;
+}
+
+.details-header-tags {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.details-header-tags span {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.details-content {
+	/*	text-indent: 2em;
+	padding: 10px;
+	min-height: 100px;*/
+	height: auto;
+}
+
+.ms-content {
+	padding: 10px 15px;
+	padding-bottom: 60px;
+}
+
+.ms-content .details-img {
+	text-align: center;
+}
+
+.ms-content .details-img img {
+	max-width: 100%;
+}
+
+.ms-content .details-text {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.ms-content .details-text * {
+	text-indent: 2em;
+	line-height: 25px;
+}
+
+.fa-edit {
+	font-size: 23px;
+	cursor: pointer;
+	margin-top: -39px;
+	margin-right: 71px
+}
+
+.audit-bs {
+	width: 147px;
+	height: 40px;
+	line-height: 34px;
+	margin-right: 10px;
+}
+
+.bootstrap-select {
+	width: 180px !important;
+}
+
+.detaisl-bottom {
+	margin-top: 40px;
+	margin-bottom: 40px
+}
+
+.detais-btn {
+	margin-top: -50px;
+}
+
+.talent-tag {
+	min-height: 100px;
+}
+
+.talent-tag span ,.talent-tag input{
+	display: inline-block;
+	min-width: 100px;
+	height: 36px;
+	line-height: 36px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin-left: 15px;
+	margin-right: 15px;
+	/*cursor: pointer;*/
+}
+
+.talent-header {
+	margin-top: 30px;
+	padding: 20px;
+	border-bottom: dashed 1px #ddd;
+}
+
+.talent-headers {
+	padding: 10px 20px 20px 20px;
+}
+
+.tag-span {
+	display: block;
+	position: relative;
+	width: 120px;
+	height: 36px;
+	float: left;
+	margin-bottom: 14px;
+	margin-right: 30px;
+}
+
+.tag-span span,.tag-span input {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.talent-add,
+.talent-reduce {
+	width: 88px;
+	height: 34px;
+	line-height: 25px;
+	font-weight: 500;
+	border-radius: 6px;
+	outline: 0!important;
+	font-size: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+.enter-input {
+	margin-top: 20px;
+	display: inline-block;
+	max-width: 200px;
+	/*height: 36px;*/
+}
+
+.delete-btn-tag {
+	background-color: #Fff;
+	color: red !important;
+	width: 20px;
+	height: 20px;
+	line-height: 18px;
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	text-align: center;
+}
+
+.share-btns {
+	display: inline-block;
+	position: absolute;
+}
+
+.jiathis_style_24x24 span {
+	margin-left: 0px !important;
+	margin-right: 2px;
+}
+
+.open-btn {
+	width: 100px;
+	margin-top: 20px;
+	margin-right: 49px;
+	height: 40px;
+	line-height: 30px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.lock-btn i {
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.lock-btn {
+	display: inline-block;
+	width: 28px;
+	height: 20px;
+	text-align: center;
+}
+
+
+/*课程增加样式*/
+
+.course-add-content {
+	background: #fff;
+	margin-top: 20px;
+	padding-left: 20px;
+}
+
+.course-add-div {
+	background-color: #fff;
+}
+
+
+/*.nav-tabs>li.active>a,.nav-tabs>li>a:hover{
+	background-color: #3399FF;
+    color: #fff;
+}*/
+
+.add-tab label,
+.full-editor label {
+	text-align: center;
+	font-size: 14px;
+}
+
+.add-tab,
+.full-editor {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.add-tab .form-group {
+	margin-top: 20px;
+}
+
+.money-course {
+	margin-top: -48px;
+}
+
+.money-course input[type="radio"] {
+	margin-left: 40px;
+	margin-top: 10px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.introduce-course {
+	min-height: 100px;
+}
+
+.img-min {
+	margin-left: -79px;
+}
+
+.course-add-new input {
+	width: 150px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 10px;
+	height: 40px;
+}
+
+.full-editor {
+	min-height: 700px;
+}
+
+.info-rela {
+	margin-top: 30px;
+}
+
+.course-add-content-detaisl {
+	margin-top: 20px;
+}
+
+.details-span-audit {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+}
+
+.audit-img {
+	display: inline-block;
+	width: 252px;
+	height: 142px;
+	overflow: hidden
+}
+
+.new-table {
+	background-color: #F2F2F2;
+	color: #333333;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center
+}
+
+.new-table th {
+	height: 48px;
+	line-height: 24px !important;
+}
+
+.modify-btn-button {
+	width: 111px;
+	margin-left: -17px;
+	height: 34px;
+}
+
+.grey-bg {
+	background-color: #D7D7D7;
+}
+
+.grey-bg .modify-new {
+	width: 82px;
+	border-radius: 4px;
+	margin-right: -14px;
+	margin-left: 52px;
+}
+
+.banner-details-setting {
+	margin-top: -40px;
+}
+
+.bannber-details-img {
+	text-align: center;
+	height: 176px;
+}
+
+.outer-address span {
+	text-indent: 2em;
+	display: inline-block;
+}
+
+.details-header-banner {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	margin-top: 23px;
+}
+
+.banner-details-setting .open-btn {
+	width: 100px;
+	margin-top: 51px;
+	margin-right: 49px;
+	height: 40px;
+	line-height: 30px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.banner-details-setting-new span {
+	margin-right: 39px;
+	margin-left: 11px;
+}
+
+.banner-open {
+	position: absolute;
+	right: 0;
+}
+
+.tab-one-detais{
+	padding-bottom: 100px;
+}
+.get-achievements span{
+    min-width: 100px;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    margin: 15px;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.peple-infomation-btn span{
+	min-width: 100px;
+    display: inline-block;
+    height: 37px;
+    line-height: 37px;
+    margin-left: 4px;
+    margin-bottom: 2px;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    border-radius: 4px;
+}
+.talent-header-new img{
+	width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    margin-left: 42px;
+}
+
+
+/*企业用户的详情页面样式*/
+.see-details-btn{
+	width: 100px;
+    display: inline-block;
+    height: 35px;
+    line-height: 26px;
+    border-radius: 4px;
+}
+
+.enterprise-details .fa-chevron-up:before {
+    content: "" !important;
+}
+
+.enterprise-details .fa-chevron-up:after {
+    content: "\f077" !important;
+    position: relative;
+    right: -3px;
+}
+.enterprise-details .fa-chevron-down:before {
+    content: "" !important;
+}
+.enterprise-details .fa-chevron-down:after {
+    content: "\f078" !important;
+    position: relative;
+    right: -5px;
+}
+
+.enterprise-details div{
+	display: inline-block;
+}
+
+.enterprise-details-content{
+	/*border-top: 1px dashed #d6d6d6;*/
+    width: 99%;
+    padding: 23px;
+    margin-top:-22px;
+}
+.enterprise-details-content p{
+	font-weight: bold;
+}
+.enterprise-details-content span{
+	text-indent: 2em;
+    max-height: 60px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    white-space: inherit;
+}
+
+.none-demand{
+    min-height: 100px;
+    margin-top: 51px;
+    margin-left: 20px;
+}
+.course-add-new{
+	margin-bottom: 80px;
+    margin-top: 40px;
+}
+.text-left{
+	text-align: left !important;
+}
+.info-classfy button{
+	height: 40px !important;
+}
+
+.info-classfy ul{
+	max-height: 400px !important;
+	overflow-y: scroll !important;
+}
+
+

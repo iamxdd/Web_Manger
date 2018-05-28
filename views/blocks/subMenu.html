@@ -1,0 +1,49 @@
+<div class="subMenu">
+	<div class="subMenu-logo">
+		<h4 class="store-top-title">四川智造人才网</h4>
+		<p class="store-top-a">www.sczzrcw.com</p>
+	</div>
+	<div class="subMenu-time">
+		<!--<div class="newDate">
+			{{now|date:'yyyy-MM-dd hh:mm'}}
+		</div>-->
+		<!--<div class="exitSy">
+			<a ui-sref="app.home">主页</a>
+			<span class="weekDay">{{weekDay}}</span>
+			<a ng-click="exitSystem()">退出</a>
+		</div>-->
+		<div class='useLogo'>
+			<div class="userPhoto">
+				<img src="img/logo.png" alt="">
+			</div>
+			<div class="useNameDiv">
+				<span class="useName">{{PcService.subStrDescribe(user.name,5)}}</span></br>
+				<span dropdown="">您好：</span>管理员 <i class="fa fa-chevron-down exit-i" ng-click="exitFun()"></i>
+			</div>
+			<ul ng-if="open_flag">
+				<li>
+					<a ng-click="exitSystem()">退出登录</a>
+				</li>
+				<li>
+					<a ng-click="modifyPassword()">密码修改</a>
+				</li>
+			</ul>	
+		</div>
+
+	</div>
+	<div class="subMenu-nav" id="lk_scrollBox">
+		<ul class="clearfix" id="nav-container">
+			<!--<ul class="clearfix" id="nav-container" ng-style="setWidth(subMenuList,'nav-container')">| jurisdictionAction:jurisdictionAction-->
+			<li ng-repeat="x in subMenuList" ng-if="isIf(x.submenu)" ng-click="changeActive($index,subMenuList,x)" ng-class="{'active':x.active}">
+				<i ng-class="x.icon" aria-hidden="true"></i></br>
+				<span ng-bind="x.title"></span>
+			</li>
+		</ul>
+		<!--<div id="lk_scrollbar">
+			<div id="lk_begin"></div>
+			<div id="lk_handle"></div>
+			<div id="lk_end"></div>
+		</div>-->
+	</div>
+
+</div>

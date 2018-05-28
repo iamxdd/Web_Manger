@@ -1,0 +1,40 @@
+.ms_leaf_menu_group{
+	list-style-type:none;
+	display:list-item;
+	padding-left:0px;
+}
+
+.ms_leaf_menu_group .ms_group_hidden{
+	display:none;
+}
+.ms_leaf_menu_group .ms_group_show{
+	display:block;
+}
+
+.ms_leaf_menu_group li{
+	border:#CCC 1px solid;
+	display:block;
+	margin-bottom:-1px;
+	padding-top:5px;
+	text-align:center;
+	margin-left:-1px;
+	margin-right:-1px;
+	cursor:pointer;
+}
+
+.ms_leaf_menu_group li>div>span{
+	float:right;
+	margin-right:10px;
+	line-height:30px;
+}
+
+.ms_leaf_menu_group li>div>a {
+	line-height:36px;
+	cursor:pointer;
+}
+.ms_leaf_menu_group .ms_parent_item{
+	background-color: rgb(244, 244, 244);
+}
+.ms_leaf_menu_group .ms_child_item{
+	background-color: white;
+}

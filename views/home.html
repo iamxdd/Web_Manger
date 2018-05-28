@@ -1,0 +1,253 @@
+<!--<h3><i class="fa fa-map-marker"></i>{{$state.current.title}}</h3>-->
+<!-- main -->
+<div class="col" cg-busy="listBusyPromise">
+	<!-- main header -->
+	<div class="row">
+		<div class="col-lg-3">
+
+			<div class="col-lg-12 main-box leftTop clearfix">
+				<dl class="main-box-header clearfix">
+					<dt></dt>
+					<dd>姓名 : {{myCountInfo.Name}}</dd>
+					<dd>I&nbsp;&nbsp;&nbsp;&nbsp; D : {{myCountInfo.ID}}</dd>
+				</dl>
+				<div class="main-box-center clearfix" ng-repeat="x in pos">
+					<span class='spanYellow'>{{x.posName}}</span>
+					<span class="spanName">{{x.posType}}</span>
+				</div>
+				<div class="main-box-footer clearfix">
+					<div ng-repeat='x in review'>
+						<span>{{x.reviewName}}</span>
+						<h4>{{x.reviewNum}}</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 main-box leftFooter clearfix">
+				<div class='leftFooterHeader'>
+					<span class="todayData">平台今日数据</span>
+				</div>
+				<div class='leftFooterContent'>
+					<div ng-if="Data.UserTodayAddRate<0"><span class="glyphicon glyphicon-arrow-down rowColor" aria-hidden="true"></span></div>
+					<div ng-if="Data.UserTodayAddRate>0"><span class="glyphicon glyphicon-arrow-up rowColor" aria-hidden="true"></span></div>
+					<div ng-if="Data.UserTodayAddRate==0"><span class="glyphicon glyphicon-minus rowColor" aria-hidden="true"></span></div>
+					<div>
+						<span>用户新增</span>
+						<h4>{{Data.UserTodayAdd }}</h4>
+					</div>
+					<div>
+						<span>新增率</span>
+						<h4>{{Data.UserTodayAddRate }}%</h4>
+					</div>
+
+				</div>
+				<div class='leftFooterContent'>
+					<div ng-if="Data.UserTodayAddRate<0"><span class="glyphicon glyphicon-arrow-down rowColor" aria-hidden="true"></span></div>
+					<div ng-if="Data.UserTodayAddRate>0"><span class="glyphicon glyphicon-arrow-up rowColor" aria-hidden="true"></span></div>
+					<div ng-if="Data.UserTodayAddRate==0"><span class="glyphicon glyphicon-minus rowColor" aria-hidden="true"></span></div>
+					<div>
+						<span>人才新增</span>
+						<h4>{{Data.TalentTodayAdd}}</h4>
+					</div>
+					<div>
+						<span>新增率</span>
+						<h4>{{Data.TalentTodayAddRate}}%</h4>
+					</div>
+
+				</div>
+				<div class='leftFooterContent'>
+					<div ng-if="Data.UserTodayAddRate<0"><span class="glyphicon glyphicon-arrow-down rowColor" aria-hidden="true"></span></div>
+					<div ng-if="Data.UserTodayAddRate>0"><span class="glyphicon glyphicon-arrow-up rowColor" aria-hidden="true"></span></div>
+					<div ng-if="Data.UserTodayAddRate==0"><span class="glyphicon glyphicon-minus rowColor" aria-hidden="true"></span></div>
+					<div>
+						<span>访客新增</span>
+						<h4>{{Data.VisitorTodayAdd }}</h4>
+					</div>
+					<div>
+						<span>新增率</span>
+						<h4>{{Data.VisitorTodayAddRate }}%</h4>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!-- main footer -->
+		<div class="col-lg-9 zz-lg-9">
+			<div class="col-lg-4 col-sm-6 col-header" ng-repeat="field in Mainheader">
+				<div class="panel widget bg-primary headerNav" style="background: {{field.background}} ">
+					<div class="row row-table">
+						<div class="pv-lg">
+							<div class='rightTop'>
+								<span class="todayData">{{field.title}}</span>
+							</div>
+							<div class="h2 mt0">
+								<span class="headericon">{{field.Num}}</span>
+								<span class='headerpop'>(人)</span>
+							</div>
+							<a class="ahref">{{field.Name}}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-12 clearfix right">
+				<div class="panel panel-default panel-color">
+					<div class="panel-body">
+						<div class='rightCenter'>
+							<span class="todayData">用户新增</span>
+						</div>
+						<div class="rightCenter-box-footer clearfix">
+							<div>
+								<h4>{{Data.UserTodayAdd}}</h4>
+								<span>今日</span>
+								<span>|</span>
+							</div>
+							<div>
+								<h4>{{Data.UserYesterdayAdd}}</h4>
+								<span>昨日</span>
+								<span>|</span>
+							</div>
+							<div>
+								<h4>{{Data.UserThisWeekAdd}}</h4>
+								<span>本周</span>
+								<span>|</span>
+							</div>
+							<div>
+								<h4>{{Data.UserLastWeekAdd}}</h4>
+								<span>上周</span>
+								<span>|</span>
+							</div>
+							<div>
+								<h4>{{Data.UserThisMonthAdd}}</h4>
+								<span>本月</span>
+								<span>|</span>
+							</div>
+							<div>
+								<h4>{{Data.UserLastMonthAdd}}</h4>
+								<span>上月</span>
+								<span>|</span>
+							</div>
+							<div>
+								<h4>{{Data.UserInTheLastMonthAdd}}</h4>
+								<span>上上月</span>
+								<span>|</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-12 clearfix right">
+				<div class="panel panel-default pannel-white ">
+					<div class="panel-body">
+						<div class='rightCenter1'>
+							<span class="todayData">人才新增</span>
+						</div>
+						<div class="rightCenter-box-footer1 clearfix">
+							<div>
+								<span>今日:</span>
+								<span>{{Data.TalentTodayAdd}}</span>
+								<span>|</span>
+							</div>
+							<div>
+								<span>昨日:</span>
+								<span>{{Data.TalentYesterdayAdd }}</span>
+								<span>|</span>
+							</div>
+							<div>
+								<span>本周:</span>
+								<span>{{Data.TalentThisWeekAdd }}</span>
+								<span>|</span>
+							</div>
+							<div>
+								<span>上周:</span>
+								<span>{{Data.TalentLastWeekAdd }}</span>
+								<span>|</span>
+							</div>
+							<div>
+								<span>本月:</span>
+								<span>{{Data.TalentThisMonthAdd}}</span>
+								<span>|</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 clearfix right">
+				<div class="panel panel-default pannel-white-footer">
+					<div class="panel-body">
+						<div class='rightCenter1'>
+							<span class="todayData">网站访客数据</span>
+						</div>
+						<div class="echartsFooter">
+							<div class="main-box-body clearfix my-echarts" id="myEcharts">
+							</div>
+							<div>
+								<div class='monthdata'>
+									<p>月情况</p>
+									<div class='monthCenter'>
+										<div>
+											<h4>{{tableData.ThisMonthCount}}<span>人</span></h4>
+											<span class="monthspan">本月</span>
+										</div>
+										<div>
+											<h4>{{tableData.LastMonthCount}}</h4>
+											<span class="monthspan">上月</span>
+										</div>
+										<div>
+											<h4>{{tableData.InTheLastMonth}}</h4>
+											<span class="monthspan">上上月</span>
+										</div>
+									</div>
+
+								</div>
+								<div class='monthdata'>
+									<p>日情况</p>
+									<div class='monthCenter'>
+										<div>
+											<h4>{{tableData.TodayCount}}<span>人</span></h4>
+											<span class="monthspan">今日</span>
+										</div>
+										<div>
+											<h4>{{tableData.YesterdayCount}}</h4>
+											<span class="monthspan">昨日</span>
+										</div>
+										<div>
+											<h4>{{tableData.DayBeforeYesterday}}</h4>
+											<span class="monthspan">前日</span>
+										</div>
+									</div>
+
+								</div>
+								<div class='monthdata'>
+									<p>周情况</p>
+									<div class='monthCenter'>
+										<div>
+											<h4>{{tableData.ThisWeek}}<span>人</span></h4>
+											<span class="monthspan">本周</span>
+										</div>
+										<div>
+											<h4>{{tableData.LastWeek}}</h4>
+											<span class="monthspan">上周</span>
+										</div>
+										<div>
+											<h4>{{tableData.InTheLastWeek}}</h4>
+											<span class="monthspan">上上周</span>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- / main -->
+
+<!-- / right col -->

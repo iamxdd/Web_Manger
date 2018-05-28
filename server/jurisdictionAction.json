@@ -1,0 +1,8 @@
+{
+	"ApiUserController":"ApiUserController",
+	"ApiAnnouncementController":"ApiUserController",
+	"ApiHelpCentreController":"ApiUserController",
+	"ApiNewsController":"infomationManagement",
+	"ApiTalentController":"ApiUserController",
+	"ApiTrainController":"ApiTrainController"
+}
